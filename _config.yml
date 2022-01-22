@@ -1,6 +1,6 @@
 lsi: false
 safe: true
-source: "/dist"
+source: "/build"
 incremental: false
 highlighter: rouge
 gist:
