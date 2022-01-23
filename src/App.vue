@@ -1,48 +1,93 @@
 <template>
   <div class="app">
     <aside class="aside">
-      <div v-for="page in pages">
-        <a :href="`#/${page.type}`" @click.prevent="setPage(page.type)">{{ page.name }}</a>
+      <div
+        :class="{ 'link-container': true, 'active': page.type === currentActivePage.type }"
+        v-for="page in Object.values(pages)"
+        @click.prevent="setPage(page.type)"
+      >
+        <a class="link" :href="`/${page.type}`">{{ page.name }}</a>
       </div>
     </aside>
     <main class="page">
-      <component :is="getComponentFromPage(getActivePage().type)" />
+      <component :is="currentActivePage.component" />
     </main>
   </div>
 </template>
 
-<script lang="ts">
-import { Page, PageType } from "./types/State";
-import { defineComponent, DefineComponent } from "vue";
-import Main from "./pages/Main.vue";
-import About from "./pages/About.vue";
+<script setup lang="ts">
+import { useStore } from "vuex";
+import { computed } from "vue";
+import { Page } from "./types/State";
+import { pages, PageType } from "./pages";
 
-export default defineComponent({
-  name: "App",
-  data() {
-    return { pages: this.$store.getters.allPages as Page[] };
-  },
-  methods: {
-    setPage(page: PageType) {
-      this.$store.dispatch("setPage", page);
-    },
-    getActivePage() {
-      return this.$store.getters.currentPage;
-    },
-    getComponentFromPage(page: PageType) {
-      const pages: Record<PageType, DefineComponent<any, any, any>> = { main: Main, about: About };
-      return pages[page] || Main;
-    }
-  }
-});
+const store = useStore();
+const currentActivePage = computed<Page>(() => store.getters.currentPage);
+
+const setPage = (page: PageType) => store.dispatch("setPage", page);
 </script>
 
 <style lang="scss" scoped>
 .app {
+  height: 100%;
   display: grid;
-  grid-template-columns: 150px auto;
+  grid-template-columns: 200px auto;
 
   .aside {
+    background-color: #182db2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 80px;
+    position: sticky;
+
+    .link-container {
+      padding: 10px;
+      background-color: #162654;
+      width: calc(80% - 20px);
+      margin: 0 0 0 5%;
+      position: relative;
+      --percent: 69%;
+      color: #fff;
+      transition: 0.2s;
+      cursor: pointer;
+
+      &.active {
+        background-color: #0a1b4b;
+      }
+
+      &:hover {
+        transform: scale(1.1) translate(5px, 0);
+      }
+
+      &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 50%;
+        aspect-ratio: 2 / 1;
+        background-image: linear-gradient(45deg, transparent var(--percent), #182db2 var(--percent));
+      }
+
+      &:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 50%;
+        aspect-ratio: 2 / 1;
+        background-image: linear-gradient(135deg, transparent var(--percent), #182db2 var(--percent));
+      }
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+    }
   }
 
   .main {
