@@ -10,8 +10,8 @@
       :percentage="percentage"
       :animation-duration="0.5"
       :has-text-content="true"
-      size="80"
-      container-width="120"
+      :size="80"
+      :container-width="120"
     />
   </section>
 </template>
