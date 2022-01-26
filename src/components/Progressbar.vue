@@ -53,7 +53,7 @@ const props = defineProps({
   containerWidth: { type: Number, default: 150 }
 });
 
-const calculatedPercentage = reactive(ref(0));
+const calculatedPercentage = ref(0);
 
 const barStyle = computed(() => ({ width: `${calculatedPercentage.value}%`, backgroundColor: props.progressbarColor }));
 const relativeStrokeHeight = computed(() => (props.strokeHeight * 100) / props.size);
