@@ -57,7 +57,8 @@ const props = defineProps({
 
 const calculatedPercentage = ref(0);
 
-const barStyle = computed(() => ({ width: `${calculatedPercentage.value}%`, backgroundColor: props.progressbarColor }));
+const barWidth = computed(() => (props.isPercentShown ? props.percentage : calculatedPercentage.value));
+const barStyle = computed(() => ({ width: `${barWidth.value}%`, backgroundColor: props.progressbarColor }));
 const relativeStrokeHeight = computed(() => (props.strokeHeight * 100) / props.size);
 const radius = computed(() => 50 - relativeStrokeHeight.value / 2);
 const doubleRadius = computed(() => radius.value * 2);
