@@ -97,7 +97,7 @@ const timer = () => {
   setTimeout(timer, ms);
 };
 
-setTimeout(timer, ms);
+setTimeout(() => setTimeout(timer, ms), props.await * 1e3);
 </script>
 
 <style lang="scss" scoped>
