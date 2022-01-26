@@ -33,9 +33,88 @@
 
 <script setup lang="ts">
 import Progressbar from "../components/Progressbar.vue";
-import { progresses } from "../config";
+import { computed, ref } from "vue";
+import { Props } from "../types/Props";
+import random from "random";
 
-const fields = Object.keys(progresses);
+const dotsCount = ref(1);
+const loadedPercent = ref(0);
+const isLoadedData = ref(false);
+const isOverflow = ref(true);
+const progresses = ref<Record<string, Props[]>>({});
+const fields = ref<string[]>([]);
+
+const interval = setInterval(() => {
+  if (dotsCount.value === 5) dotsCount.value = 0;
+  dotsCount.value++;
+
+  if (isLoadedData.value) clearInterval(interval);
+}, 650);
+
+const firstLimit = random.int(35, 44);
+const secondLimit = random.int(5, 9);
+
+const loadingIntervalStep1 = setInterval(() => {
+  loadedPercent.value++;
+  if (loadedPercent.value >= firstLimit) clearInterval(loadingIntervalStep1);
+}, 80);
+
+const loadingIntervalStep2 = setInterval(() => {
+  if (loadedPercent.value < firstLimit) return;
+  loadedPercent.value++;
+  if (loadedPercent.value >= firstLimit + secondLimit) clearInterval(loadingIntervalStep2);
+}, 400);
+
+const loadingIntervalStep3 = setInterval(() => {
+  if (loadedPercent.value < firstLimit + secondLimit) return;
+  loadedPercent.value += random.int(3, 5);
+
+  if (loadedPercent.value >= 100) {
+    loadedPercent.value = 100;
+    clearInterval(loadingIntervalStep3);
+    isLoadedData.value = true;
+    setTimeout(() => (isOverflow.value = false), 800);
+  }
+}, 60);
+
+const getDots = computed(() => Array.from({ length: dotsCount.value }).fill(".").join(""));
+
+fetch("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json")
+  .then(resp => resp.json())
+  .then(config => {
+    progresses.value = {
+      General: [
+        { text: "JavaScript", percentage: 60, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 30, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 25, color: "#E5CF1C" }
+      ],
+      Frontend: [
+        { text: "JavaScript", percentage: 60, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 20, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 25, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 20, color: "#E5CF1C" }
+      ],
+      Backend: [
+        { text: "JavaScript", percentage: 60, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 30, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 20, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 25, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 30, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 20, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
+        { text: "JavaScript", percentage: 20, color: "#E5CF1C" }
+      ]
+    };
+
+    fields.value = Object.keys(progresses.value);
+  });
 </script>
 
 <style lang="scss" scoped></style>
