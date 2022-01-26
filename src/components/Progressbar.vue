@@ -50,7 +50,9 @@ const props = defineProps({
   size: { type: Number, default: 100 },
   animationDuration: { type: Number, default: 1 },
   contentMaxAcceptableNumber: { type: Number, default: 10 },
-  containerWidth: { type: Number, default: 150 }
+  containerWidth: { type: String, default: "100%" },
+  isPercentShown: { type: Boolean, default: false },
+  await: { type: Number, default: 0 }
 });
 
 const calculatedPercentage = ref(0);
