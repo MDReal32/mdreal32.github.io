@@ -22,12 +22,13 @@
       </div>
       <div :class="{ 'text-entry': true, 'circle': !isLine }">
         <div :style="{ color: textColor }" class="integer">
-          <span v-if="isLine">{{ text }}&nbsp;</span>
-          <span v-if="isLine">(</span>
-          <span class="fullPart">{{ number[0] }}</span>
-          <span class="point">.</span>
-          <span class="fractionalPart">{{ number[1] }}</span>
-          <span v-if="isLine">)</span>
+          <span v-if="isLine && hasTextContent">{{ text }}&nbsp;</span>
+          <span v-if="isLine && hasTextContent">(</span>
+          <span class="fullPart">{{ isPercentShown ? percentage : number[0] }}</span>
+          <span v-if="!isPercentShown" class="point">.</span>
+          <span v-if="!isPercentShown" class="fractionalPart">{{ number[1] }}</span>
+          <span v-if="isPercentShown" class="fractionalPart">%</span>
+          <span v-if="isLine && hasTextContent">)</span>
         </div>
       </div>
     </div>
