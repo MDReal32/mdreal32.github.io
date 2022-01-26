@@ -8,7 +8,8 @@
     "prebuild": "yarn build:client && yarn build:server",
     "build": "ts-node prerender.ts",
     "postbuild": "rimraf build/ssr-manifest.json build/server-bundle",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.25.0",
