@@ -3,9 +3,7 @@
     <div :class="{ progress: true }">
       <div v-if="isLine" class="line">
         <div :style="{ height: `${strokeHeight}px` }" class="outer">
-          <div :style="barStyle" class="inner">
-            <div v-if="hasTextContent" class="line-text" style="color: white">{{ calculatedPercentage }}%</div>
-          </div>
+          <div :style="barStyle" class="inner" />
         </div>
       </div>
       <div v-else :style="{ width: `${size}px`, height: `${size}px` }" class="circle">
