@@ -117,4 +117,56 @@ fetch("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json")
   });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+  background: #1a1a1a;
+  color: #b5e853;
+  min-height: 100%;
+
+  &.content-is-loading {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .section {
+    padding: 10px 10px 5px 10px;
+
+    h2 {
+      text-align: center;
+      font-family: "Comforter", cursive;
+    }
+
+    .bars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 120px);
+      gap: 10px;
+    }
+  }
+
+  .loading {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+
+    .progress-container {
+      width: 100%;
+    }
+  }
+
+  .fade {
+    &-enter-active {
+      transition: all 0.3s ease-out 0.8s;
+    }
+
+    &-leave-active {
+      transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+    }
+
+    &-enter-from,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
+}
+</style>
