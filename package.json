@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "random": "^3.0.6",
     "vue": "^3.2.25",
     "vuex": "4.0.2"
@@ -21,6 +22,8 @@
     "@types/prettier": "^2.4.3",
     "@vitejs/plugin-vue": "^2.0.0",
     "html-minifier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-prepush": "^2.2.0",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "sass": "^1.49.0",
