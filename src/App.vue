@@ -32,6 +32,7 @@ const setPage = (page: PageType) => store.dispatch("setPage", page);
   height: 100%;
   display: grid;
   grid-template-columns: 200px auto;
+  overflow: hidden;
 
   .aside {
     background-color: #182db2;
@@ -90,7 +91,8 @@ const setPage = (page: PageType) => store.dispatch("setPage", page);
     }
   }
 
-  .main {
+  main {
+    overflow: auto;
   }
 }
 </style>
