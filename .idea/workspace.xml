@@ -1,34 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/conventionalCommit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Progressbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Progressbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" />
+    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="Unused import removed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Props.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -90,8 +79,170 @@
       <option name="presentableId" value="Default" />
       <updated>1643209351085</updated>
       <workItem from="1643209352204" duration="3128000" />
-      <workItem from="1643225221273" duration="3541000" />
+      <workItem from="1643225221273" duration="4884000" />
     </task>
+    <task id="LOCAL-00001" summary="new package installed">
+      <created>1643228910601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643228910601</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Google font connected">
+      <created>1643228927914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643228927914</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Inside percent removed">
+      <created>1643228944053</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643228944053</updated>
+    </task>
+    <task id="LOCAL-00004" summary="default is container width">
+      <created>1643228968092</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1643228968092</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Show line changed">
+      <created>1643228983691</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643228983691</updated>
+    </task>
+    <task id="LOCAL-00006" summary="default is reactive">
+      <created>1643228994603</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643228994603</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2 new props. &#10;isPercentShown - shows percents.&#10;await - waits before start">
+      <created>1643229030778</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229030778</updated>
+    </task>
+    <task id="LOCAL-00008" summary="barWidth fix">
+      <created>1643229048580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229048580</updated>
+    </task>
+    <task id="LOCAL-00009" summary="debug fixes">
+      <created>1643229066433</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229066433</updated>
+    </task>
+    <task id="LOCAL-00010" summary="await">
+      <created>1643229073891</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229073891</updated>
+    </task>
+    <task id="LOCAL-00011" summary="New Pages Added">
+      <created>1643229084515</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229084515</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Animation and data loading added">
+      <created>1643229104433</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229104433</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fetch data then use dummy data">
+      <created>1643229166183</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229166183</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Styles">
+      <created>1643229174495</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229174495</updated>
+    </task>
+    <task id="LOCAL-00015" summary="renamed">
+      <created>1643229180923</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229180923</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Scrolling fix">
+      <created>1643229190317</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229190317</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Dummy data removed">
+      <created>1643229202431</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229202431</updated>
+    </task>
+    <task id="LOCAL-00018" summary="IDE configs">
+      <created>1643229217632</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229217632</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Config">
+      <created>1643229243528</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229243528</updated>
+    </task>
+    <task id="LOCAL-00020" summary="2 new Pages Added.&#10;Empty by now">
+      <created>1643229257396</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1643229257396</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Axios and husky installed">
+      <created>1643230182554</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1643230182554</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Husky init">
+      <created>1643230191465</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1643230191465</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Unused import removed">
+      <created>1643230201795</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1643230201795</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +258,32 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new package installed" />
+    <MESSAGE value="Google font connected" />
+    <MESSAGE value="Inside percent removed" />
+    <MESSAGE value="default is container width" />
+    <MESSAGE value="Show line changed" />
+    <MESSAGE value="default is reactive" />
+    <MESSAGE value="2 new props. &#10;isPercentShown - shows percents.&#10;await - waits before start" />
+    <MESSAGE value="barWidth fix" />
+    <MESSAGE value="debug fixes" />
+    <MESSAGE value="await" />
+    <MESSAGE value="New Pages Added" />
+    <MESSAGE value="Animation and data loading added" />
+    <MESSAGE value="Fetch data then use dummy data" />
+    <MESSAGE value="Styles" />
+    <MESSAGE value="renamed" />
+    <MESSAGE value="Scrolling fix" />
+    <MESSAGE value="Dummy data removed" />
+    <MESSAGE value="IDE configs" />
+    <MESSAGE value="Config" />
+    <MESSAGE value="2 new Pages Added.&#10;Empty by now" />
+    <MESSAGE value="Axios and husky installed" />
+    <MESSAGE value="Husky init" />
+    <MESSAGE value="Unused import removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unused import removed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
