@@ -78,7 +78,7 @@ const isLine = computed(() => props.progressbarType === "line");
 
 const stepsCount = 20;
 const stepPart = props.percentage / ((stepsCount * (stepsCount + 1)) / 2);
-const msPart = (props.animationDuration * 1000) / ((stepsCount * (stepsCount + 1)) / 2);
+const msPart = (props.animationDuration * 1e3) / ((stepsCount * (stepsCount + 1)) / 2);
 
 let step = stepPart * stepsCount;
 let ms = msPart * stepsCount;
@@ -90,7 +90,6 @@ const timer = () => {
   ms -= msPart;
 
   if (calculatedPercentage.value + stepPart >= props.percentage) {
-    console.log(calculatedPercentage.value, props.percentage);
     calculatedPercentage.value = props.percentage;
     return;
   }
