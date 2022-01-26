@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "random": "^3.0.6",
     "vue": "^3.2.25",
     "vuex": "4.0.2"
   },
