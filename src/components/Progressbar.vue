@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :style="{ width: containerWidth ? `${containerWidth}px` : '100%' }">
+  <div class="container" :style="{ width: containerWidth }">
     <div :class="{ progress: true }">
       <div v-if="isLine" class="line">
         <div :style="{ height: `${strokeHeight}px` }" class="outer">
