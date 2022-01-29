@@ -45,12 +45,9 @@ const isOverflow = ref(true);
 const progresses = ref<Record<string, Props[]>>({});
 const fields = ref<string[]>([]);
 
-const interval = setInterval(() => {
-  if (dotsCount.value === 5) dotsCount.value = 0;
-  dotsCount.value++;
-
-  if (isLoadedData.value) clearInterval(interval);
-}, 650);
+const store = useStore();
+progresses.value = store.getters.config;
+fields.value = Object.keys(store.getters.config);
 
 const firstLimit = random.int(35, 44);
 const secondLimit = random.int(5, 9);
