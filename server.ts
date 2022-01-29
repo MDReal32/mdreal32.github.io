@@ -1,0 +1,79 @@
+import express from "express";
+import { resolve as res } from "path";
+import { readFileSync } from "fs";
+import { createServer as viteCreateServer, ViteDevServer, InlineConfig as ViteCreateServerConfig } from "vite";
+import compression from "compression";
+import serveStatic from "serve-static";
+import { Render } from "./src/entry-server";
+import { getHtml } from "./server/utils/getHtml";
+
+const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
+const _isProd = process.env.NODE_ENV === "production";
+
+const app = express();
+let vite: ViteDevServer;
+
+const viteConfig: ViteCreateServerConfig = {
+  logLevel: isTest ? "error" : "info",
+  server: {
+    middlewareMode: "ssr",
+    watch: {
+      // During tests we edit the files too fast and sometimes chokidar
+      // misses change events, so enforce polling for consistency
+      usePolling: true,
+      interval: 100
+    }
+  }
+};
+
+const resolve = (...p: string[]) => res(__dirname, ...p);
+
+export const createServer = async (root = process.cwd(), isProd = _isProd) => {
+  viteConfig.root = root;
+
+  // @ts-ignore
+  const indexProd = isProd ? readFileSync(resolve("dist/client/index.html"), "utf-8") : "";
+
+  if (isProd) {
+    app.use(compression());
+    app.use(serveStatic(resolve("dist", "client"), { index: false }));
+  } else {
+    vite = await viteCreateServer(viteConfig);
+    app.use(vite.middlewares);
+  }
+
+  app.use("*", async (req, res) => {
+    const { originalUrl: url } = req;
+    let template: string, render: Render;
+
+    try {
+      if (isProd) {
+        template = indexProd;
+        render = require("./dist/server/entry-server.js").render;
+      } else {
+        const rawFile = readFileSync(resolve("index.html"), "utf-8");
+        template = await vite.transformIndexHtml(url, rawFile);
+        render = (await vite.ssrLoadModule("/src/entry-server.ts")).render;
+      }
+
+      const html = await getHtml({ url, render, isProd, template });
+
+      res.status(200).set({ "Content-Type": "text/html" }).end(html);
+    } catch (e) {
+      if (e instanceof Error) {
+        vite && vite.ssrFixStacktrace(e);
+        console.log(e.stack);
+        res.status(500).end(e.stack);
+      }
+    }
+  });
+
+  return { app, vite };
+};
+
+if (!isTest) {
+  (async () => {
+    const { app } = await createServer();
+    app.listen(3000, () => console.log("http://localhost:3000"));
+  })();
+}
