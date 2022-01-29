@@ -79,43 +79,6 @@ const loadingIntervalStep3 = setInterval(() => {
 }, 60);
 
 const getDots = computed(() => Array.from({ length: dotsCount.value }).fill(".").join(""));
-
-interface Config {}
-
-Axios.get<Config>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json").then(({ data: config }) => {
-  progresses.value = {
-    General: [
-      { text: "JavaScript", percentage: 60, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 30, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 25, color: "#E5CF1C" }
-    ],
-    Frontend: [
-      { text: "JavaScript", percentage: 60, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 20, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 25, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 20, color: "#E5CF1C" }
-    ],
-    Backend: [
-      { text: "JavaScript", percentage: 60, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 30, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 20, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 25, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 30, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 20, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 70, color: "#E5CF1C" },
-      { text: "JavaScript", percentage: 20, color: "#E5CF1C" }
-    ]
-  };
-
-  fields.value = Object.keys(progresses.value);
-});
 </script>
 
 <style lang="scss" scoped>
