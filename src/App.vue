@@ -15,16 +15,14 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { useStore } from "vuex";
-import { computed } from "vue";
-import { Page } from "./types/State";
-import { pages, PageType } from "./pages";
+<script lang="ts" setup>
+import { useRouter } from "vue-router";
+import { routes } from "./router";
 
-const store = useStore();
-const currentActivePage = computed<Page>(() => store.getters.currentPage);
+const router = useRouter();
 
-const setPage = (page: PageType) => store.dispatch("setPage", page);
+const isActive = (idx: number) => routes[idx].path === router.currentRoute.value.path;
+const setPage = (idx: number) => router.push(routes[idx].path);
 </script>
 
 <style lang="scss" scoped>
