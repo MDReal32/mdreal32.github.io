@@ -5,7 +5,7 @@ export interface ServerRenderFunctionResponse {
   context: SSRContext;
 }
 
-export type ServerRenderFunction = () => Promise<ServerRenderFunctionResponse>;
+export type ServerRenderFunction = (url: string) => Promise<ServerRenderFunctionResponse>;
 
 export interface ServerModule {
   render: ServerRenderFunction;
