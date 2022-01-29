@@ -10,7 +10,7 @@
     </transition>
 
     <transition name="fade" v-for="field in fields">
-      <section class="section" v-if="isLoadedData">
+      <section class="section">
         <h2>{{ field }}</h2>
         <div class="bars">
           <Progressbar
