@@ -1,10 +1,10 @@
 import express from "express";
 import { resolve as res } from "path";
 import { readFileSync } from "fs";
-import { createServer as viteCreateServer, ViteDevServer, InlineConfig as ViteCreateServerConfig } from "vite";
+import { createServer as viteCreateServer, InlineConfig as ViteCreateServerConfig, ViteDevServer } from "vite";
 import compression from "compression";
 import serveStatic from "serve-static";
-import { Render } from "./src/entry-server";
+import { ServerRenderFunction } from "./src/types/ServerRenderFunction";
 import { getHtml } from "./server/utils/getHtml";
 
 const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
