@@ -1,3 +1,8 @@
-import { app } from "./main";
+import { createApp } from "./main";
+import { router } from "./router";
 
-app.mount("#app");
+(async () => {
+  const app = await createApp();
+  await router.isReady();
+  app.mount("#app");
+})();
