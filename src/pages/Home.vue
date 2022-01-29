@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 import Progressbar from "../components/Progressbar.vue";
 import { computed, ref } from "vue";
-import { Props } from "../types/Props";
+import { Config } from "../types/Config";
 import random from "random";
 import Axios from "axios";
 
@@ -42,7 +42,7 @@ const dotsCount = ref(1);
 const loadedPercent = ref(0);
 const isLoadedData = ref(false);
 const isOverflow = ref(true);
-const progresses = ref<Record<string, Props[]>>({});
+const progresses = ref<Config>({});
 const fields = ref<string[]>([]);
 
 const store = useStore();
