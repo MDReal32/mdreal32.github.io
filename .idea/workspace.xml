@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="Unused import removed">
-      <change afterPath="$PROJECT_DIR$/src/pages/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="pages">
+      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prerender.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prerender.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entry-client.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entry-server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entry-server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/ServerRenderFunction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/ServerRenderFunction.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/State.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/State.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +107,7 @@
       <updated>1643209351085</updated>
       <workItem from="1643209352204" duration="3128000" />
       <workItem from="1643225221273" duration="4884000" />
-      <workItem from="1643472941974" duration="3087000" />
+      <workItem from="1643472941974" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="new package installed">
       <created>1643228910601</created>
@@ -282,7 +270,119 @@
       <option name="project" value="LOCAL" />
       <updated>1643230201795</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="IDE configuration">
+      <created>1643476136756</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476136757</updated>
+    </task>
+    <task id="LOCAL-00025" summary="New packages added">
+      <created>1643476147642</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476147642</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Formatted">
+      <created>1643476168154</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476168154</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Editor Config">
+      <created>1643476337287</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476337287</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Nodemon">
+      <created>1643476343676</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476343676</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Routing added.">
+      <created>1643476403618</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476403618</updated>
+    </task>
+    <task id="LOCAL-00030" summary="server.ts vite.config.ts and package.json added to parsing zone">
+      <created>1643476493442</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476493442</updated>
+    </task>
+    <task id="LOCAL-00031" summary="version update">
+      <created>1643476506430</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476506430</updated>
+    </task>
+    <task id="LOCAL-00032" summary="dev script changed">
+      <created>1643476518396</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476518396</updated>
+    </task>
+    <task id="LOCAL-00033" summary="new dependencies added">
+      <created>1643476574155</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476574155</updated>
+    </task>
+    <task id="LOCAL-00034" summary="preloaded links">
+      <created>1643476581540</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476581540</updated>
+    </task>
+    <task id="LOCAL-00035" summary="removed">
+      <created>1643476587842</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476587842</updated>
+    </task>
+    <task id="LOCAL-00036" summary="always shown">
+      <created>1643476600039</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476600039</updated>
+    </task>
+    <task id="LOCAL-00037" summary="server handler">
+      <created>1643476606494</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476606494</updated>
+    </task>
+    <task id="LOCAL-00038" summary="README file">
+      <created>1643476617120</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476617120</updated>
+    </task>
+    <task id="LOCAL-00039" summary="pages">
+      <created>1643476626300</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476626300</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,20 +400,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new package installed" />
-    <MESSAGE value="Google font connected" />
-    <MESSAGE value="Inside percent removed" />
-    <MESSAGE value="default is container width" />
-    <MESSAGE value="Show line changed" />
-    <MESSAGE value="default is reactive" />
-    <MESSAGE value="2 new props. &#10;isPercentShown - shows percents.&#10;await - waits before start" />
-    <MESSAGE value="barWidth fix" />
-    <MESSAGE value="debug fixes" />
-    <MESSAGE value="await" />
-    <MESSAGE value="New Pages Added" />
-    <MESSAGE value="Animation and data loading added" />
-    <MESSAGE value="Fetch data then use dummy data" />
-    <MESSAGE value="Styles" />
     <MESSAGE value="renamed" />
     <MESSAGE value="Scrolling fix" />
     <MESSAGE value="Dummy data removed" />
@@ -323,7 +409,23 @@
     <MESSAGE value="Axios and husky installed" />
     <MESSAGE value="Husky init" />
     <MESSAGE value="Unused import removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unused import removed" />
+    <MESSAGE value="IDE configuration" />
+    <MESSAGE value="New packages added" />
+    <MESSAGE value="Formatted" />
+    <MESSAGE value="Editor Config" />
+    <MESSAGE value="Nodemon" />
+    <MESSAGE value="Routing added." />
+    <MESSAGE value="server.ts vite.config.ts and package.json added to parsing zone" />
+    <MESSAGE value="version update" />
+    <MESSAGE value="dev script changed" />
+    <MESSAGE value="new dependencies added" />
+    <MESSAGE value="preloaded links" />
+    <MESSAGE value="removed" />
+    <MESSAGE value="always shown" />
+    <MESSAGE value="server handler" />
+    <MESSAGE value="README file" />
+    <MESSAGE value="pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
