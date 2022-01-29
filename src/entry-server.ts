@@ -1,5 +1,6 @@
 import { renderToString, SSRContext } from "vue/server-renderer";
-import { app } from "./main";
+import { createApp } from "./main";
+import { router } from "./router";
 import { ServerRenderFunction } from "./types/ServerRenderFunction";
 
 export const render: ServerRenderFunction = async () => {
