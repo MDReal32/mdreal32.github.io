@@ -2,15 +2,15 @@
   <div class="app">
     <aside class="aside">
       <div
-        :class="{ 'link-container': true, 'active': page.type === currentActivePage.type }"
-        v-for="page in Object.values(pages)"
-        @click.prevent="setPage(page.type)"
+        :class="{ 'link-container': true, 'active': isActive(idx) }"
+        v-for="(route, idx) in routes"
+        @click.prevent="setPage(idx)"
       >
-        <a class="link" :href="`/${page.type}`">{{ page.name }}</a>
+        <a :href="route.path" class="link" @click.prevent>{{ route.name }}</a>
       </div>
     </aside>
     <main class="page">
-      <component :is="currentActivePage.component" />
+      <router-view />
     </main>
   </div>
 </template>
