@@ -3,9 +3,13 @@ import { createApp } from "./main";
 import { router } from "./router";
 import { ServerRenderFunction } from "./types/ServerRenderFunction";
 
-export const render: ServerRenderFunction = async () => {
-  const ctx: SSRContext = {};
-  const html = await renderToString(app, ctx);
+export const render: ServerRenderFunction = async (url: string) => {
+  await router.push(url);
+  await router.isReady();
+  const app = await createApp();
 
-  return { html };
+  const context: SSRContext = {};
+  const html = await renderToString(app, context);
+
+  return { html, context };
 };
