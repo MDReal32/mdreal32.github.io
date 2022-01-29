@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="pages">
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="State changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entry-server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entry-server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/ServerRenderFunction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/ServerRenderFunction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/State.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/State.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,56 +100,7 @@
       <updated>1643209351085</updated>
       <workItem from="1643209352204" duration="3128000" />
       <workItem from="1643225221273" duration="4884000" />
-      <workItem from="1643472941974" duration="3665000" />
-    </task>
-    <task id="LOCAL-00001" summary="new package installed">
-      <created>1643228910601</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1643228910601</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Google font connected">
-      <created>1643228927914</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1643228927914</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Inside percent removed">
-      <created>1643228944053</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1643228944053</updated>
-    </task>
-    <task id="LOCAL-00004" summary="default is container width">
-      <created>1643228968092</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1643228968092</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Show line changed">
-      <created>1643228983691</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1643228983691</updated>
-    </task>
-    <task id="LOCAL-00006" summary="default is reactive">
-      <created>1643228994603</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1643228994603</updated>
-    </task>
-    <task id="LOCAL-00007" summary="2 new props. &#10;isPercentShown - shows percents.&#10;await - waits before start">
-      <created>1643229030778</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229030778</updated>
+      <workItem from="1643472941974" duration="4339000" />
     </task>
     <task id="LOCAL-00008" summary="barWidth fix">
       <created>1643229048580</created>
@@ -382,7 +326,126 @@
       <option name="project" value="LOCAL" />
       <updated>1643476626300</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="routing">
+      <created>1643476685375</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476685375</updated>
+    </task>
+    <task id="LOCAL-00041" summary="configs">
+      <created>1643476691025</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476691025</updated>
+    </task>
+    <task id="LOCAL-00042" summary="sorting function">
+      <created>1643476705555</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476705555</updated>
+    </task>
+    <task id="LOCAL-00043" summary="IDE configuration">
+      <created>1643476715782</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476715782</updated>
+    </task>
+    <task id="LOCAL-00044" summary="imports">
+      <created>1643476779051</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476779051</updated>
+    </task>
+    <task id="LOCAL-00045" summary="export app changed to export createApp function">
+      <created>1643476792323</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476792323</updated>
+    </task>
+    <task id="LOCAL-00046" summary="app changed to createApp function">
+      <created>1643476855680</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476855680</updated>
+    </task>
+    <task id="LOCAL-00047" summary="modified render function">
+      <created>1643476867738</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476867738</updated>
+    </task>
+    <task id="LOCAL-00048" summary="modified client side">
+      <created>1643476880336</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1643476880336</updated>
+    </task>
+    <task id="LOCAL-00049" summary="vue-router">
+      <created>1643477178201</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477178201</updated>
+    </task>
+    <task id="LOCAL-00050" summary="vue 3 sfc setup script and routing">
+      <created>1643477193956</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477193956</updated>
+    </task>
+    <task id="LOCAL-00051" summary="will return SSRContext">
+      <created>1643477208280</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477208280</updated>
+    </task>
+    <task id="LOCAL-00052" summary="accept url parameter">
+      <created>1643477220302</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477220302</updated>
+    </task>
+    <task id="LOCAL-00053" summary="State changes. Config">
+      <created>1643477249577</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477249577</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Rename">
+      <created>1643477256625</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477256625</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Rename">
+      <created>1643477260708</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477260708</updated>
+    </task>
+    <task id="LOCAL-00056" summary="State changed">
+      <created>1643477304137</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477304137</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,22 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="renamed" />
-    <MESSAGE value="Scrolling fix" />
-    <MESSAGE value="Dummy data removed" />
-    <MESSAGE value="IDE configs" />
-    <MESSAGE value="Config" />
-    <MESSAGE value="2 new Pages Added.&#10;Empty by now" />
-    <MESSAGE value="Axios and husky installed" />
-    <MESSAGE value="Husky init" />
-    <MESSAGE value="Unused import removed" />
-    <MESSAGE value="IDE configuration" />
-    <MESSAGE value="New packages added" />
-    <MESSAGE value="Formatted" />
-    <MESSAGE value="Editor Config" />
-    <MESSAGE value="Nodemon" />
-    <MESSAGE value="Routing added." />
-    <MESSAGE value="server.ts vite.config.ts and package.json added to parsing zone" />
     <MESSAGE value="version update" />
     <MESSAGE value="dev script changed" />
     <MESSAGE value="new dependencies added" />
@@ -425,7 +472,23 @@
     <MESSAGE value="server handler" />
     <MESSAGE value="README file" />
     <MESSAGE value="pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="pages" />
+    <MESSAGE value="routing" />
+    <MESSAGE value="configs" />
+    <MESSAGE value="sorting function" />
+    <MESSAGE value="IDE configuration" />
+    <MESSAGE value="imports" />
+    <MESSAGE value="export app changed to export createApp function" />
+    <MESSAGE value="app changed to createApp function" />
+    <MESSAGE value="modified render function" />
+    <MESSAGE value="modified client side" />
+    <MESSAGE value="vue-router" />
+    <MESSAGE value="vue 3 sfc setup script and routing" />
+    <MESSAGE value="will return SSRContext" />
+    <MESSAGE value="accept url parameter" />
+    <MESSAGE value="State changes. Config" />
+    <MESSAGE value="Rename" />
+    <MESSAGE value="State changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="State changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
