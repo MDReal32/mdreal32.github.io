@@ -7,7 +7,7 @@ import { isSSR } from "./config";
 import { Config } from "./types/Config";
 
 export const createApp = async () => {
-  const config = await Axios.get<Progress>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json");
+  const config = await Axios.get<Config>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json");
   await store.dispatch("setConfig", config.data);
   await store.dispatch("setConfig", {
     General: [
