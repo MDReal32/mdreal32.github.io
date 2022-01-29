@@ -75,6 +75,12 @@ const loadingIntervalStep3 = setInterval(() => {
   }
 }, 60);
 
+const interval = setInterval(() => {
+  if (dotsCount.value === 5) dotsCount.value = 0;
+  dotsCount.value++;
+
+  if (isLoadedData.value) clearInterval(interval);
+}, 650);
 const getDots = computed(() => Array.from({ length: dotsCount.value }).fill(".").join(""));
 </script>
 
