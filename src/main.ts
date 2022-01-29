@@ -4,7 +4,7 @@ import { store } from "./store";
 import Axios from "axios";
 import { router } from "./router";
 import { isSSR } from "./config";
-import { Progress } from "./types/Progress";
+import { Config } from "./types/Config";
 
 export const createApp = async () => {
   const config = await Axios.get<Progress>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json");
