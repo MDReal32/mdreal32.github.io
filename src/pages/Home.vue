@@ -36,7 +36,7 @@ import Progressbar from "../components/Progressbar.vue";
 import { computed, ref } from "vue";
 import { Config } from "../types/Config";
 import random from "random";
-import Axios from "axios";
+import { useStore } from "vuex";
 
 const dotsCount = ref(1);
 const loadedPercent = ref(0);
