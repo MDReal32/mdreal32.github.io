@@ -15,15 +15,7 @@ let vite: ViteDevServer;
 
 const viteConfig: ViteCreateServerConfig = {
   logLevel: isTest ? "error" : "info",
-  server: {
-    middlewareMode: "ssr",
-    watch: {
-      // During tests we edit the files too fast and sometimes chokidar
-      // misses change events, so enforce polling for consistency
-      usePolling: true,
-      interval: 100
-    }
-  }
+  server: { middlewareMode: "ssr", watch: { usePolling: true, interval: 100 } }
 };
 
 const resolve = (...p: string[]) => res(__dirname, ...p);
