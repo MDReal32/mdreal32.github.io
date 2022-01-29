@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="State changed">
+    <list default="true" id="d06e1c09-f730-4a28-9e9e-3a657e692e36" name="Changes" comment="It's me my friends ))))">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,98 +100,7 @@
       <updated>1643209351085</updated>
       <workItem from="1643209352204" duration="3128000" />
       <workItem from="1643225221273" duration="4884000" />
-      <workItem from="1643472941974" duration="4339000" />
-    </task>
-    <task id="LOCAL-00008" summary="barWidth fix">
-      <created>1643229048580</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229048580</updated>
-    </task>
-    <task id="LOCAL-00009" summary="debug fixes">
-      <created>1643229066433</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229066433</updated>
-    </task>
-    <task id="LOCAL-00010" summary="await">
-      <created>1643229073891</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229073891</updated>
-    </task>
-    <task id="LOCAL-00011" summary="New Pages Added">
-      <created>1643229084515</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229084515</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Animation and data loading added">
-      <created>1643229104433</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229104433</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Fetch data then use dummy data">
-      <created>1643229166183</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229166183</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Styles">
-      <created>1643229174495</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229174495</updated>
-    </task>
-    <task id="LOCAL-00015" summary="renamed">
-      <created>1643229180923</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229180923</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Scrolling fix">
-      <created>1643229190317</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229190317</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Dummy data removed">
-      <created>1643229202431</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229202431</updated>
-    </task>
-    <task id="LOCAL-00018" summary="IDE configs">
-      <created>1643229217632</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229217632</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Config">
-      <created>1643229243528</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229243528</updated>
-    </task>
-    <task id="LOCAL-00020" summary="2 new Pages Added.&#10;Empty by now">
-      <created>1643229257396</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1643229257396</updated>
+      <workItem from="1643472941974" duration="5013000" />
     </task>
     <task id="LOCAL-00021" summary="Axios and husky installed">
       <created>1643230182554</created>
@@ -445,7 +354,98 @@
       <option name="project" value="LOCAL" />
       <updated>1643477304137</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="refactor">
+      <created>1643477339929</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477339929</updated>
+    </task>
+    <task id="LOCAL-00058" summary="refactor">
+      <created>1643477351163</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477351163</updated>
+    </task>
+    <task id="LOCAL-00059" summary="extracted to main">
+      <created>1643477370395</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477370395</updated>
+    </task>
+    <task id="LOCAL-00060" summary="get progress from store">
+      <created>1643477399484</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477399484</updated>
+    </task>
+    <task id="LOCAL-00061" summary="extracted to interface">
+      <created>1643477410079</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477410079</updated>
+    </task>
+    <task id="LOCAL-00062" summary="useStore">
+      <created>1643477417654</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477417654</updated>
+    </task>
+    <task id="LOCAL-00063" summary="moved from top">
+      <created>1643477424739</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477424739</updated>
+    </task>
+    <task id="LOCAL-00064" summary="IDE Configuration">
+      <created>1643477439261</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477439262</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Config type">
+      <created>1643477449556</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477449556</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Server util scripts.&#10;&#10;Get HTML From render function">
+      <created>1643477467078</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477467078</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Server util scripts.&#10;&#10;Render preload links">
+      <created>1643477478287</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477478287</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Server util scripts.&#10;&#10;Render preload links">
+      <created>1643477482659</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477482659</updated>
+    </task>
+    <task id="LOCAL-00069" summary="It's me my friends ))))">
+      <created>1643477491722</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1643477491722</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,18 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="version update" />
-    <MESSAGE value="dev script changed" />
-    <MESSAGE value="new dependencies added" />
-    <MESSAGE value="preloaded links" />
-    <MESSAGE value="removed" />
-    <MESSAGE value="always shown" />
-    <MESSAGE value="server handler" />
-    <MESSAGE value="README file" />
-    <MESSAGE value="pages" />
-    <MESSAGE value="routing" />
-    <MESSAGE value="configs" />
-    <MESSAGE value="sorting function" />
     <MESSAGE value="IDE configuration" />
     <MESSAGE value="imports" />
     <MESSAGE value="export app changed to export createApp function" />
@@ -488,7 +476,19 @@
     <MESSAGE value="State changes. Config" />
     <MESSAGE value="Rename" />
     <MESSAGE value="State changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="State changed" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="extracted to main" />
+    <MESSAGE value="get progress from store" />
+    <MESSAGE value="extracted to interface" />
+    <MESSAGE value="useStore" />
+    <MESSAGE value="moved from top" />
+    <MESSAGE value="IDE Configuration" />
+    <MESSAGE value="Config type" />
+    <MESSAGE value="Server util scripts.&#10;&#10;Get HTML From render function" />
+    <MESSAGE value="Server util scripts.&#10;&#10;Render preload link" />
+    <MESSAGE value="Server util scripts.&#10;&#10;Render preload links" />
+    <MESSAGE value="It's me my friends ))))" />
+    <option name="LAST_COMMIT_MESSAGE" value="It's me my friends ))))" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
