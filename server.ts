@@ -36,7 +36,7 @@ export const createServer = async (root = process.cwd(), isProd = _isProd) => {
 
   app.use("*", async (req, res) => {
     const { originalUrl: url } = req;
-    let template: string, render: Render;
+    let template: string, render: ServerRenderFunction;
 
     try {
       if (isProd) {
