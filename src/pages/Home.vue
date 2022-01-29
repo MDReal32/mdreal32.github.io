@@ -31,7 +31,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import Progressbar from "../components/Progressbar.vue";
 import { computed, ref } from "vue";
 import { Props } from "../types/Props";
