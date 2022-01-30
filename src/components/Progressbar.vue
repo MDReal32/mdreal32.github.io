@@ -52,7 +52,8 @@ const props = defineProps({
   contentMaxAcceptableNumber: { type: Number, default: 10 },
   containerWidth: { type: String, default: "100%" },
   isPercentShown: { type: Boolean, default: false },
-  await: { type: Number, default: 0 }
+  await: { type: Number, default: 0 },
+  isAnimate: { type: Boolean, default: false }
 });
 
 const calculatedPercentage = ref(0);
@@ -97,7 +98,10 @@ const timer = () => {
   setTimeout(timer, ms);
 };
 
-setTimeout(() => setTimeout(timer, ms), props.await * 1e3);
+watch(
+  () => props.isAnimate,
+  value => value && (props.await ? setTimeout(() => setTimeout(timer, ms), props.await * 1e3) : setTimeout(timer, ms))
+);
 </script>
 
 <style lang="scss" scoped>
