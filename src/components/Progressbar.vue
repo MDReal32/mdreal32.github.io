@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
+import { computed, watch, ref } from "vue";
 
 const props = defineProps({
   strokeHeight: { type: Number, default: 4 },
