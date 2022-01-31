@@ -24,7 +24,6 @@ const minifierOptions: MinifierOption = {
   html5: true,
   sortAttributes: true,
   keepClosingSlash: true,
-  maxLineLength: 120,
   minifyCSS: true,
   minifyJS: true,
   minifyURLs: true,
