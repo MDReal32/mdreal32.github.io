@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "nodemon server",
     "build:server": "vite build --ssr src/entry-server.ts --outDir build/server-bundle",
-    "build:client": "rimraf build && vue-tsc --noEmit && vite build --ssrManifest",
-    "prebuild": "yarn build:client && yarn build:server",
+    "build:client": "vue-tsc --noEmit && vite build --ssrManifest",
+    "prebuild": "rimraf build && yarn build:client && yarn build:server",
     "build": "ts-node prerender.ts",
     "postbuild": "rimraf build/ssr-manifest.json build/server-bundle",
     "preview": "vite preview",
