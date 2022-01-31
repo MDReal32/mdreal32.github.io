@@ -130,13 +130,6 @@ watch(
           transition: width 0.6s ease;
           text-align: right;
           line-height: 80%;
-
-          .line-text {
-            margin-left: 6px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 5px;
-          }
         }
       }
     }
