@@ -11,7 +11,7 @@
           <path :d="trackPath" :stroke-width="relativeStrokeHeight" fill="none" stroke="#e5e9f2" />
           <path
             :d="trackPath"
-            :stroke="props.progressbarColor || '#20a0ff'"
+            :stroke="props.progressbarColor"
             :stroke-width="relativeStrokeHeight"
             :style="circlePathStyle"
             class="fillTrack"
@@ -43,7 +43,7 @@ const props = defineProps({
   strokeHeight: { type: Number, default: 4 },
   percentage: { type: Number, default: 0, required: true, validator: (value: number) => value >= 0 && value <= 100 },
   progressbarType: { type: String, default: "line", validator: (val: string) => ["circle", "line"].includes(val) },
-  progressbarColor: { type: String },
+  progressbarColor: { type: String, default: "#20a0ff" },
   hasTextContent: { type: Boolean, default: false },
   text: { type: String },
   textColor: { type: String },
