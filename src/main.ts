@@ -5,6 +5,9 @@ import Axios from "axios";
 import { router } from "./router";
 import { isSSR } from "./config";
 import { Config } from "./types/Config";
+import Preloader from "./components/Preloader.vue";
+
+export const preloaderApp = _createApp(Preloader).use(store);
 
 export const createApp = async () => {
   const config = await Axios.get<Config>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json");
