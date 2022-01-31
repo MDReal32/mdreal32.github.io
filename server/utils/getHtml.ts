@@ -19,9 +19,16 @@ const prettierOptions: PrettierOptions = {
 const minifierOptions: MinifierOption = {
   removeComments: true,
   collapseWhitespace: true,
+  collapseInlineTagWhitespace: true,
   collapseBooleanAttributes: true,
   html5: true,
-  sortAttributes: true
+  sortAttributes: true,
+  keepClosingSlash: true,
+  maxLineLength: 120,
+  minifyCSS: true,
+  minifyJS: true,
+  minifyURLs: true,
+  sortClassName: true
 };
 
 export const getHtml = async (options: Options) => {
