@@ -42,7 +42,7 @@ const loadingIntervalStep3 = setInterval(() => {
     const parent = rootElement.value?.parentNode?.parentNode as HTMLDivElement;
     parent.classList.add("loaded");
     setTimeout(() => store.dispatch("pageReady"), 400);
-    setTimeout(() => (parent.innerHTML = ""), 800);
+    setTimeout(() => parent.parentNode?.removeChild(parent), 800);
   }
 }, 30);
 
