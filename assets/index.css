@@ -37,6 +37,40 @@ body {
 }
 .preloader .preloader-container {
   width: 100%;
+  margin: 10px auto;
+  position: relative;
+}
+.preloader .preloader-container .line {
+  display: inline-block;
+  width: 98%;
+  box-sizing: border-box;
+}
+.preloader .preloader-container .line .outer {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ebeef5;
+}
+.preloader .preloader-container .line .outer .inner {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  height: 100%;
+  transition: width 0.6s ease;
+  text-align: right;
+  line-height: 80%;
+}
+.preloader .preloader-container .text-entry {
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+}
+.preloader .preloader-container .text-entry .integer {
+  display: block;
+}
+.preloader .preloader-container .text-entry .integer .fullPart {
+  font-size: 2rem;
+}
+.preloader .preloader-container .text-entry .integer .fractionalPart {
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=index.css.map */
