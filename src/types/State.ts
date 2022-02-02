@@ -1,6 +1,6 @@
-import { Config } from "./Config";
+import { Data } from "./Data";
 
 export interface State {
-  config: Config;
+  config: Data;
   isPageReady: boolean;
 }
