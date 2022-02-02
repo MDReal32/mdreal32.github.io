@@ -4,14 +4,14 @@
       <h2>{{ field }}</h2>
       <div class="bars">
         <Progressbar
-          v-for="{ percentage, text, color } in progresses[field]"
+          v-for="{ percentage, name, color } in progresses[field]"
           :animation-duration="0.5"
           :is-animate="isLoadingEnabled"
           :has-text-content="true"
           :percentage="percentage"
           :progressbar-color="color"
           :size="80"
-          :text="text"
+          :text="name"
           :text-color="color"
           progressbar-type="circle"
         />
