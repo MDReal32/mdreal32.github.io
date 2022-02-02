@@ -58,7 +58,7 @@ const props = defineProps({
   isPercentShown: { type: Boolean, default: false },
   isNumberVisible: { type: Boolean, default: true },
   await: { type: Number, default: 0 },
-  isAnimate: { type: Boolean, default: false }
+  isAnimate: { type: Boolean, default: null }
 });
 
 const calculatedPercentage = ref(0);
