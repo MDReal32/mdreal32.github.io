@@ -1,5 +1,7 @@
 <template>
-  <button v-for="l in languages" @click="locale(l.toLowerCase())">{{ l.at(0).toUpperCase() }}{{ l.slice(1) }}</button>
+  <button v-for="l in languages" @click="locale(l.toLowerCase())">
+    {{ l?.at(0)?.toUpperCase() || "" }}{{ l?.slice(1) || "" }}
+  </button>
 
   <div class="resume">
     <div class="left">
