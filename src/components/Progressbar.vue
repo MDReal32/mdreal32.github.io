@@ -103,6 +103,8 @@ const timer = () => {
   setTimeout(timer, ms);
 };
 
+if (props.isAnimate === null) setTimeout(timer, ms);
+
 watch(
   () => props.isAnimate,
   value => value && (props.await ? setTimeout(() => setTimeout(timer, ms), props.await * 1e3) : setTimeout(timer, ms))
