@@ -26,7 +26,7 @@ import { computed, ref } from "vue";
 import { Data } from "../types/Data";
 import { useStore } from "vuex";
 
-const progresses = ref<Config>({});
+const progresses = ref<Data["skills"]>({});
 const fields = ref<string[]>([]);
 
 const store = useStore();
