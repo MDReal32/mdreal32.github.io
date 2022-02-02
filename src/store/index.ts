@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 import { State } from "../types/State";
-import { Config } from "../types/Config";
+import { Data } from "../types/Data";
 
 export const store = createStore<State>({
   state: { config: {}, isPageReady: false },
@@ -13,7 +13,7 @@ export const store = createStore<State>({
     }
   },
   mutations: {
-    setConfig(state, config: Config) {
+    setConfig(state, config: Data) {
       state.config = config;
     },
     pageReady(state) {
@@ -21,7 +21,7 @@ export const store = createStore<State>({
     }
   },
   actions: {
-    setConfig({ commit }, config: Config) {
+    setConfig({ commit }, config: Data) {
       commit("setConfig", config);
     },
     pageReady({ commit }) {
