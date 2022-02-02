@@ -21,7 +21,7 @@
         </svg>
       </div>
       <div :class="{ 'text-entry': true, 'circle': !isLine }">
-        <div :style="{ color: textColor }" class="integer">
+        <div :style="{ color: textColor }" class="text-content">
           <span v-if="isLine && hasTextContent">{{ text }}&nbsp;</span>
           <span v-if="isLine && hasTextContent">(</span>
           <span class="fullPart">{{ isPercentShown ? percentage : number[0] }}</span>
