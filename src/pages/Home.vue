@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 import Progressbar from "../components/Progressbar.vue";
 import { computed, ref } from "vue";
-import { Config } from "../types/Config";
+import { Data } from "../types/Data";
 import { useStore } from "vuex";
 
 const progresses = ref<Config>({});
