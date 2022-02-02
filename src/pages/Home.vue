@@ -30,8 +30,8 @@ const progresses = ref<Data["skills"]>({});
 const fields = ref<string[]>([]);
 
 const store = useStore();
-progresses.value = store.getters.config;
-fields.value = Object.keys(store.getters.config);
+progresses.value = (store.getters.config as Data).skills;
+fields.value = Object.keys(progresses.value);
 
 const isLoadingEnabled = computed(() => store.getters.isPageReady);
 </script>
