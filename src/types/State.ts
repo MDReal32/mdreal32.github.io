@@ -1,6 +1,6 @@
 import { Data } from "./Data";
 
 export interface State {
-  config: Data;
+  config: Partial<Data>;
   isPageReady: boolean;
 }
