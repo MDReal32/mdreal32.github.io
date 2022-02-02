@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section v-for="field in fields" class="section">
-      <h2>{{ field }}</h2>
+      <h2>{{ field }} Skills</h2>
       <div class="bars">
         <Progressbar
           v-for="{ percentage, name, color } in progresses[field]"
