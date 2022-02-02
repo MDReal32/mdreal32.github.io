@@ -165,7 +165,7 @@ watch(
         width: 100%;
       }
 
-      .integer {
+      .text-content {
         display: block;
 
         .fullPart {
