@@ -56,6 +56,7 @@ const props = defineProps({
   contentMaxAcceptableNumber: { type: Number, default: 10 },
   containerWidth: { type: String, default: "100%" },
   isPercentShown: { type: Boolean, default: false },
+  isNumberVisible: { type: Boolean, default: true },
   await: { type: Number, default: 0 },
   isAnimate: { type: Boolean, default: false }
 });
