@@ -44,10 +44,9 @@
         <h2 class="header">Education</h2>
 
         <div class="educations">
-          <div v-for="{ name, description, location, from, to } in educations" class="education">
+          <div v-for="{ name, location, from, to } in educations" class="education">
             <div class="name">{{ name }}</div>
             <div class="location">{{ location.name }} - {{ location.country }}, {{ location.city }}</div>
-            <div class="description">{{ description }}</div>
             <div v-if="to" class="from-to">{{ from }} - {{ to }}</div>
             <div v-else class="from-since">{{ from }} - Since</div>
           </div>
@@ -96,7 +95,7 @@
 
 <script lang="ts" setup>
 import { useStore } from "vuex";
-import { Data, Skill } from "../types/Data";
+import { Data, OverkilledSkill, Skill } from "../types/Data";
 import Progressbar from "../components/Progressbar.vue";
 import { computed, ref } from "vue";
 import { getMonth } from "../utils/getMonth";
@@ -151,7 +150,7 @@ const getUserNameFromUrl = (url: string) => {
   return url;
 };
 
-const groupBy = <T extends Skill = Skill>(skills: T[]): T[] => {
+const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] => {
   const newSkills: Record<string, T[]> & { [nongroup]: T[] } = { [nongroup]: [] };
 
   skills.forEach(skill => {
