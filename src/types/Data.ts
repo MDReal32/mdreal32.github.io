@@ -29,7 +29,7 @@ export interface Language {
   percent: number;
 }
 
-export interface Education extends Base {
+export interface Education extends Omit<Base, "description"> {
   location: EducationLocation;
   from: number;
   to?: number;
