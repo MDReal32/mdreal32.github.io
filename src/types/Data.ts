@@ -48,7 +48,7 @@ interface Work extends Base {
 }
 
 type OverkilledSkill =
-  | (Omit<Skill, "description" | "percentage"> & { description?: never; percentage?: never })
+  | (Omit<Skill, "description" | "percentage"> & { description?: never } & { percentage?: never })
   | (Omit<Skill, "group"> & { group?: never });
 
 export interface Data {
