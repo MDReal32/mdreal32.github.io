@@ -17,7 +17,12 @@ jobs:
 
       - name: Trigger Updating Data.ts
         run: |
-          curl -X POST -u "${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" -H "Content-Type: application/json" https://api.github.com/repos/${{ github.actor }}/${{ github.actor }}/dispatches --data '{ "event_type": "build_application" }'
+          curl \
+            -X POST \
+            -u ${{ secrets.GITHUB_TOKEN }} \
+            -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" \
+            https://api.github.com/repos/${{ github.actor }}/${{ github.actor }}/dispatches \
+            --data '{ "event_type": "ping" }'
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
