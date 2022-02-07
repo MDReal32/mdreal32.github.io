@@ -6,7 +6,7 @@
         :class="{ 'link-container': true, 'active': isActive(idx) }"
         @click.prevent="setPage(idx)"
       >
-        <a :href="route.path" class="link" @click.prevent>{{ route.name }}</a>
+        <a :href="route.path" class="link" @click.prevent>{{ route.text }}</a>
       </div>
     </aside>
     <main class="page">
@@ -17,12 +17,30 @@
 
 <script lang="ts" setup>
 import { useRouter } from "vue-router";
-import { routes } from "./router";
+import { useStore } from "vuex";
+import { Data } from "./types/Data";
+
+const store = useStore();
+
+const config = store.getters.config as Data;
+const skillNames = Object.keys(config.skills);
+
+interface PageRoutes {
+  text: string;
+  path: string;
+}
+
+const pageRoutes: PageRoutes[] = [
+  { path: "/home", text: "Home" },
+  { path: "/about", text: "About" },
+  ...skillNames.map(skillName => ({ path: `/technology/${skillName}`, text: `${skillName} Skills` } as PageRoutes)),
+  { path: "/cv", text: "CV" }
+];
 
 const router = useRouter();
 
-const isActive = (idx: number) => routes[idx].path === router.currentRoute.value.path;
-const setPage = (idx: number) => router.push(routes[idx].path);
+const isActive = (idx: number) => () => pageRoutes[idx].path === router.currentRoute.value.path;
+const setPage = (idx: number) => router.push(pageRoutes[idx].path);
 </script>
 
 <style lang="scss" scoped>
