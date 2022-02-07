@@ -1,28 +1,16 @@
 import { createMemoryHistory, createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { isSSR } from "./config";
-import { index, order } from "./pages";
-import { sortElementsByNames } from "./utils/sortElementsByNames";
+import { CV, About, Home, Technology } from "./pages";
 
-// @ts-ignore
-const pages: Record<string, Function> = import.meta.glob("/src/pages/**/*.vue");
+export const routes: RouteRecordRaw[] = [
+  { name: "Index", path: "/", component: async () => Home },
+  { name: "Home", path: "/home", component: async () => Home },
+  { name: "About", path: "/about", component: async () => About },
+  { name: "Technology", path: "/technology/:techid", component: async () => Technology },
+  { name: "CV", path: "/cv", component: async () => CV }
+];
 
-export const foundRoutes: RouteRecordRaw[] = Object.entries(pages).map(([name, Component]) => {
-  const validName = name.replace(/^\/src\/pages\/(.+)\.vue$/i, "$1");
-  const path = `/${validName}`.toLowerCase();
-  return { path, name: validName, component: Component } as RouteRecordRaw;
-});
-
-export const routes = sortElementsByNames(order, foundRoutes, (routes, element) =>
-  routes.find(route => route.path.endsWith(element.toLowerCase()))
-);
-
-let found;
 export const router = createRouter({
   history: isSSR ? createMemoryHistory() : createWebHistory(),
-  routes: [
-    ...(({ ...found } = routes.find(route => route.path === `/${index}`))
-      ? (((found.path = "/"), (found.name += "_Index")), [found])
-      : []),
-    ...routes
-  ]
+  routes
 });
