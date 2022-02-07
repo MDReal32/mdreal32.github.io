@@ -2,8 +2,8 @@
   <div class="app">
     <aside class="aside">
       <div
+        v-for="(route, idx) in pageRoutes"
         :class="{ 'link-container': true, 'active': isActive(idx) }"
-        v-for="(route, idx) in routes"
         @click.prevent="setPage(idx)"
       >
         <a :href="route.path" class="link" @click.prevent>{{ route.name }}</a>
