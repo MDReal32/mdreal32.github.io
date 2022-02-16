@@ -45,8 +45,8 @@
 
         <div class="educations">
           <div v-for="{ name, location, from, to } in educations" class="education">
-            <div class="name">{{ name }}</div>
-            <div class="location">{{ location.name }} - {{ location.country }}, {{ location.city }}</div>
+            <div class="name">{{ t(name) }}</div>
+            <div class="location">{{ t(location.name) }} - {{ t(location.country) }}, {{ t(location.city) }}</div>
             <div v-if="to" class="from-to">{{ from }} - {{ to }}</div>
             <div v-else class="from-since">{{ from }} - Since</div>
           </div>
@@ -79,7 +79,7 @@
             <div class="skill-items">
               <div v-for="{ name, description } in groupBy(skill)" class="item">
                 <div class="item-name">{{ name }}</div>
-                <div class="item-description">{{ description }}</div>
+                <div class="item-description">{{ t(description) }}</div>
               </div>
             </div>
           </div>
