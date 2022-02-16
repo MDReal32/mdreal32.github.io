@@ -65,7 +65,7 @@ export interface Data {
   languages: Language[];
   education: Education[];
   socialLinks: SocialLink[];
-  work: Job[];
+  job: Job[];
   groups: Record<string, string>;
   i18n: Record<string, Record<string, string>>;
 }
