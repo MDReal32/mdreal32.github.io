@@ -3,7 +3,7 @@ import { isSSR } from "./config";
 import { CV, About, Home, Technology } from "./pages";
 
 export const routes: RouteRecordRaw[] = [
-  { name: "Index", path: "/", component: async () => Home },
+  { name: "Index", path: "/", component: async () => CV },
   { name: "Home", path: "/home", component: async () => Home },
   { name: "About", path: "/about", component: async () => About },
   { name: "Technology", path: "/technology/:techid", component: async () => Technology },
