@@ -1,6 +1,6 @@
 <template>
   <button v-for="l in languages" @click="locale(l.toLowerCase())">
-    {{ l?.at(0)?.toUpperCase() || "" }}{{ l?.slice(1) || "" }}
+    {{ modifyString(l || "") }}
   </button>
 
   <div class="resume">
