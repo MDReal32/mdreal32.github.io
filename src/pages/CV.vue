@@ -180,7 +180,7 @@ const getUserNameFromUrl = (url: string) => {
 };
 
 const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] => {
-  const newSkills: Record<string, T[]> & { [nongroup]: T[] } = { [nongroup]: [] };
+  const newSkills: Record<string, T[]> = {};
 
   skills.forEach(skill => {
     if (skill.group) {
