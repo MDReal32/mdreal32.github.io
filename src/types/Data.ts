@@ -45,6 +45,7 @@ interface Work extends Base {
   from: Omit<Date, "day"> & { day?: Date["day"] };
   to: Omit<Date, "day"> & { day?: Date["day"] };
   location: Location;
+  role: string;
 }
 
 export type OverkilledSkill =
