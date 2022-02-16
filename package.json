@@ -9,7 +9,7 @@
     "prebuild": "rimraf build && yarn build:client && yarn build:server",
     "build": "ts-node prerender.ts",
     "postbuild": "rimraf build/ssr-manifest.json build/server-bundle",
-    "preview": "vite preview",
+    "preview": "serve build",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -17,8 +17,6 @@
     "compression": "^1.7.4",
     "express": "^4.17.2",
     "glob": "^7.2.0",
-    "html-minifier": "^4.0.0",
-    "prettier": "^2.5.1",
     "random": "^3.0.6",
     "serve-static": "^1.14.2",
     "vue": "^3.2.25",
@@ -40,6 +38,7 @@
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "sass": "^1.49.0",
+    "serve": "^13.0.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5",
     "vite": "^2.7.2",
