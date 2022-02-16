@@ -117,13 +117,12 @@
 
 <script lang="ts" setup>
 import { useStore } from "vuex";
-import { Data, OverkilledSkill, Skill } from "../types/Data";
+import { Data, OverkilledSkill } from "../types/Data";
 import Progressbar from "../components/Progressbar.vue";
 import { computed, ref } from "vue";
 import { getMonth } from "../utils/getMonth";
 import { padStart } from "../utils/padStart";
 
-const nongroup = Symbol("nongruoup");
 const store = useStore();
 const config = store.getters.config as Data;
 const isLoadingEnabled = computed(() => store.getters.isPageReady);
