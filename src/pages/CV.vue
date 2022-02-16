@@ -189,14 +189,17 @@ const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] 
     }
   }
 
-  const combinedSkills = Object.values(newSkills).map(skills => {
-    return skills.reduce((acc, skill) => {
+  const combinedSkillsEntries = Object.entries(newSkills).map(([name, skills]) => {
+    const skill = skills.reduce((acc, skill) => {
       acc.name = acc.name ? `${acc.name} / ${skill.name}` : skill.name;
       acc.description = config.groups[skill.group!];
 
       return acc;
     }, {} as T);
+
+    return [name, skill];
   });
+  const combinedSkills = Object.fromEntries(combinedSkillsEntries);
 
   return [...newSkills[nongroup], ...combinedSkills];
 };
