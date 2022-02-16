@@ -144,7 +144,7 @@ const modifyString = (
 
 const birthday = computed(() => {
   const { day, month, year } = config.birthday;
-  return `${padStart(day, "0", 2)} ${getMonth(month)} ${year}`;
+  return `${padStart(day, "0", 2)} ${t(getMonth(month))} ${year}`;
 });
 
 const getLevelFromPercent = (percent: number) => {
