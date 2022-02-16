@@ -34,22 +34,8 @@ const pageRoutes = getPageRoutes();
 
 const languages: Lang[] = ["az", "ru", "en"];
 const config = store.getters.config as Data;
-const skillNames = Object.keys(config.skills);
 
-interface PageRoutes {
-  text: string;
-  path: string;
-}
-
-const pageRoutes: PageRoutes[] = [
-  { path: "/home", text: "Home" },
-  { path: "/about", text: "About" },
-  ...skillNames.map(skillName => ({ path: `/technology/${skillName}`, text: `${skillName} Skills` } as PageRoutes)),
-  { path: "/cv", text: "CV" }
-];
-
-const router = useRouter();
-
+const locale = (lang: Lang) => store.dispatch("setLang", lang);
 const isActive = (idx: number) => () => pageRoutes[idx].path === router.currentRoute.value.path;
 const setPage = (idx: number) => router.push(pageRoutes[idx].path);
 </script>
