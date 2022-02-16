@@ -48,7 +48,7 @@
             <div class="name">{{ t(name) }}</div>
             <div class="location">{{ t(location.name) }} - {{ t(location.country) }}, {{ t(location.city) }}</div>
             <div v-if="to" class="from-to">{{ from }} - {{ to }}</div>
-            <div v-else class="from-since">{{ from }} - Since</div>
+            <div v-else class="from-since">{{ tForm(from.toString(), "education.since") }}</div>
           </div>
         </div>
       </section>
