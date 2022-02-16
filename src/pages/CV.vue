@@ -88,6 +88,28 @@
 
       <section class="sector">
         <h2>Work Experience</h2>
+
+        <div class="jobs">
+          <div class="job" v-for="{ name, role, description, from, to, location } in config.work.reverse()">
+            <div class="job-name">
+              <span>{{ role }}</span>
+            </div>
+            <div class="job-content">
+              <span class="name">{{ name }}</span>
+              <span class="hyphen">&nbsp;-&nbsp;</span>
+              <span class="location">{{ t(location.country) }}, {{ t(location.city) }}</span>
+              <span class="hyphen">&nbsp;-&nbsp;</span>
+              <span class="from-to" v-if="to">
+                {{ modifyString(tForm(`${from.year} ${t(getMonth(from.month))}`, "work.from")) }}
+                {{ modifyString(tForm(`${to.year} ${t(getMonth(to.month))}`, "work.to")) }}
+              </span>
+              <span v-else class="from-since">{{ tForm(`${from.month} ${from.year}`, "education.since") }}</span>
+            </div>
+            <div class="job-description">
+              <span>{{ t(description) }}</span>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
