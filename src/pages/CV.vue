@@ -163,8 +163,8 @@ const getLevelFromPercent = (percent: number) => {
 
 const getUserNameFromUrl = (url: string) => {
   const regexes = {
-    github: /^(?:https?:\/\/(?:www\.)?)github\.com\/(?<username>\w+)\/?$/,
-    linkedin: /^(?:https?:\/\/(?:www\.)?)linkedin\.com\/in\/(?<username>\w+)\/?$/
+    github: /^(?:https?:\/\/(?:www\.)?)?github\.com\/(?<username>\w+)\/?$/,
+    linkedin: /^(?:https?:\/\/(?:www\.)?)?linkedin\.com\/in\/(?<username>\w+)\/?$/
   };
 
   let m;
