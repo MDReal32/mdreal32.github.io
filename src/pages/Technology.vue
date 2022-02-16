@@ -20,7 +20,7 @@ onBeforeRouteUpdate((to, from, next) => {
 const techId = ref(router.currentRoute.value.params.techid as string);
 
 const config = store.getters.config as Data;
-const currentSkills = computed(() => config.skills[techId.value]);
+const currentSkills = computed(() => config.skills[techId.value] || []);
 const currentGroups = computed(() =>
   Array.from(new Set<string>(currentSkills.value.map(skill => skill.group as string)))
     .filter(Boolean)
