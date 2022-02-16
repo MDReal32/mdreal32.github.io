@@ -7,9 +7,9 @@ export const getPageRoutes = (config = computed(() => store.getters.config as Da
   const skillNames = Object.keys(config.skills || []);
 
   return [
-    { path: "/home", text: "Home" },
-    { path: "/about", text: "About" },
-    ...skillNames.map<PageRoutes>(skillName => ({ path: `/technology/${skillName}`, text: `${skillName} Skills` })),
+    // { path: "/home", text: "Home" },
+    // { path: "/about", text: "About" },
+    // ...skillNames.map<PageRoutes>(skillName => ({ path: `/technology/${skillName}`, text: `${skillName} Skills` })),
     { path: "/cv", text: "CV" }
   ];
 };
