@@ -79,7 +79,7 @@
             <div class="skill-items">
               <div v-for="{ name, description } in groupBy(skill)" class="item">
                 <div class="item-name">{{ name }}</div>
-                <div class="item-description">{{ t(description) }}</div>
+                <div class="item-description">{{ t(description || "") }}</div>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@
               <span v-else class="from-since">{{ tForm(`${from.month} ${from.year}`, "education.since") }}</span>
             </div>
             <div class="job-description">
-              <span>{{ t(description) }}</span>
+              <span>{{ t(description || "") }}</span>
             </div>
           </div>
         </div>
