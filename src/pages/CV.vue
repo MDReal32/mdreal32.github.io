@@ -149,17 +149,22 @@ const birthday = computed(() => {
 });
 
 const getLevelFromPercent = (percent: number) => {
-  return percent >= 100
-    ? "Native"
-    : percent >= 85
-    ? "Advanced"
-    : percent >= 70
-    ? "Upper-Intermediate"
-    : percent >= 60
-    ? "Intermediate"
-    : percent >= 40
-    ? "Pre-Intermediate"
-    : "Beginner";
+  return t(
+    percent >= 100
+      ? "#native"
+      : percent >= 85
+      ? "#advanced"
+      : percent >= 70
+      ? "#upper-intermediate"
+      : percent >= 60
+      ? "#intermediate"
+      : percent >= 40
+      ? "#pre-intermediate"
+      : "#beginner"
+  )
+    .split(" ")
+    .map(str => modifyString(str))
+    .join(" ");
 };
 
 const getUserNameFromUrl = (url: string) => {
