@@ -1,6 +1,11 @@
 <template>
   <div class="app">
     <aside class="aside">
+      <div class="convertLanguage">
+        <button class="button animated" v-for="l in languages" @click="locale(l)">
+          <span>{{ modifyString(l || "") }}</span>
+        </button>
+      </div>
       <div
         v-for="(route, idx) in pageRoutes"
         :class="{ 'link-container': true, 'active': isActive(idx) }"
@@ -19,9 +24,15 @@
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { Data } from "./types/Data";
+import { Lang } from "./types/Lang";
+import { modifyString } from "./utils/modifyString";
+import { getPageRoutes } from "./utils/pageRoutes";
 
 const store = useStore();
+const router = useRouter();
+const pageRoutes = getPageRoutes();
 
+const languages: Lang[] = ["az", "ru", "en"];
 const config = store.getters.config as Data;
 const skillNames = Object.keys(config.skills);
 

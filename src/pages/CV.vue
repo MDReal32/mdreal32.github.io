@@ -1,8 +1,4 @@
 <template>
-  <button v-for="l in languages" @click="locale(l.toLowerCase())">
-    {{ modifyString(l || "") }}
-  </button>
-
   <div class="resume">
     <div class="left">
       <section class="sector logo">
@@ -122,16 +118,16 @@ import Progressbar from "../components/Progressbar.vue";
 import { computed, ref } from "vue";
 import { getMonth } from "../utils/getMonth";
 import { padStart } from "../utils/padStart";
+import { Lang } from "../types/Lang";
+import { modifyString } from "../utils/modifyString";
 
 const store = useStore();
 const config = store.getters.config as Data;
+const language = computed(() => store.getters.getLang as Lang);
 const isLoadingEnabled = computed(() => store.getters.isPageReady);
 const educations = computed(() => config.education.reverse());
 const jobs = computed(() => config.job.reverse());
-const languages = ["az", "ru", "en"];
-const language = ref("az");
 
-const locale = (lang: string) => (language.value = lang);
 const t = (message: string) => config.i18n[language.value][message?.slice(1)] || message;
 const tForm = (input: string, code: string) =>
   language.value === "az" ? `${t(input)}${t(`#${code}`)}` : `${t(`#${code}`)} ${t(input)}`;
