@@ -201,7 +201,18 @@ const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] 
   });
   const combinedSkills = Object.fromEntries(combinedSkillsEntries);
 
-  return [...newSkills[nongroup], ...combinedSkills];
+  const loaded = new Set<string>();
+  return skills
+    .map(skill => {
+      if (skill.group && !loaded.has(skill.group)) {
+        loaded.add(skill.group);
+        return combinedSkills[skill.group];
+      } else if (!skill.group) {
+        return skill;
+      }
+    })
+    .flat(1)
+    .filter(Boolean) as T[];
 };
 </script>
 
