@@ -342,11 +342,35 @@ const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] 
               &-name {
                 font-size: 2rem;
                 padding-left: 4px;
+
+                &:before {
+                  content: " - ";
+                }
               }
 
               &-description {
+                padding-left: 20px;
               }
             }
+          }
+        }
+      }
+
+      .jobs {
+        .job {
+          padding: 5px 0 5px 10px;
+
+          &-name {
+            font-weight: bold;
+            font-size: 2.4rem;
+          }
+
+          &-description {
+            padding-left: 10px;
+          }
+
+          &-content {
+            padding-left: 10px;
           }
         }
       }
