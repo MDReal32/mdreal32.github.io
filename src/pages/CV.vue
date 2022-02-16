@@ -182,14 +182,12 @@ const getUserNameFromUrl = (url: string) => {
 const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] => {
   const newSkills: Record<string, T[]> = {};
 
-  skills.forEach(skill => {
+  for (const skill of skills) {
     if (skill.group) {
       newSkills[skill.group] ||= [];
       newSkills[skill.group].push(skill);
-    } else {
-      newSkills[nongroup].push(skill);
     }
-  });
+  }
 
   const combinedSkills = Object.values(newSkills).map(skills => {
     return skills.reduce((acc, skill) => {
