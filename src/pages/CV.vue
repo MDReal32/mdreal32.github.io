@@ -131,8 +131,16 @@ const languages = ["az", "ru", "en"];
 const language = ref("az");
 
 const locale = (lang: string) => (language.value = lang);
+const t = (message: string) => config.i18n[language.value][message?.slice(1)] || message;
+const tForm = (input: string, code: string) =>
+  language.value === "az" ? `${t(input)}${t(`#${code}`)}` : `${t(`#${code}`)} ${t(input)}`;
 
-const t = (message: string) => config.i18n[language.value][message.slice(1)] || message;
+const modifyString = (
+  message: string,
+  startIndex = 0,
+  endIndex = 1,
+  callback: (message: string) => string = e => e.toUpperCase()
+) => callback(message.slice(startIndex, endIndex)) + message.slice(endIndex);
 
 const birthday = computed(() => {
   const { day, month, year } = config.birthday;
