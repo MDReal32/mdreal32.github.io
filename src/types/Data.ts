@@ -41,7 +41,7 @@ export interface SocialLink {
   url: string;
 }
 
-interface Work extends Base {
+interface Job extends Base {
   from: Omit<Date, "day"> & { day?: Date["day"] };
   to: Omit<Date, "day"> & { day?: Date["day"] };
   location: Location;
@@ -65,7 +65,7 @@ export interface Data {
   languages: Language[];
   education: Education[];
   socialLinks: SocialLink[];
-  work: Work[];
+  work: Job[];
   groups: Record<string, string>;
   i18n: Record<string, Record<string, string>>;
 }
