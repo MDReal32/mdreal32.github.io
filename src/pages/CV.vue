@@ -90,7 +90,7 @@
         <h2>Work Experience</h2>
 
         <div class="jobs">
-          <div class="job" v-for="{ name, role, description, from, to, location } in config.work.reverse()">
+          <div class="job" v-for="{ name, role, description, from, to, location } in jobs">
             <div class="job-name">
               <span>{{ role }}</span>
             </div>
@@ -127,6 +127,7 @@ const store = useStore();
 const config = store.getters.config as Data;
 const isLoadingEnabled = computed(() => store.getters.isPageReady);
 const educations = computed(() => config.education.reverse());
+const jobs = computed(() => config.job.reverse());
 const languages = ["az", "ru", "en"];
 const language = ref("az");
 
