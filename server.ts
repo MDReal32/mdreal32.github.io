@@ -6,6 +6,8 @@ import compression from "compression";
 import serveStatic from "serve-static";
 import { ServerRenderFunction } from "./src/types/ServerRenderFunction";
 import { getHtml } from "./server/utils/getHtml";
+import Axios from "axios";
+import type { Data } from "./src/types/Data";
 
 const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
 const _isProd = process.env.NODE_ENV === "production";
@@ -37,6 +39,9 @@ export const createServer = async (root = process.cwd(), isProd = _isProd) => {
   app.use("*", async (req, res) => {
     const { originalUrl: url } = req;
     let template: string, render: ServerRenderFunction;
+    const { data: config } = await Axios.get<Data>(
+      "https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json"
+    );
 
     try {
       if (isProd) {
@@ -48,7 +53,7 @@ export const createServer = async (root = process.cwd(), isProd = _isProd) => {
         render = (await vite.ssrLoadModule("/src/entry-server.ts")).render;
       }
 
-      const html = await getHtml({ url, render, isProd, template });
+      const html = await getHtml({ url, render, isProd, template }, config);
 
       res.status(200).set({ "Content-Type": "text/html" }).end(html);
     } catch (e) {
