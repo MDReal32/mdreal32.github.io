@@ -4,6 +4,7 @@ import { minify, Options as MinifierOption } from "html-minifier";
 import { readFileSync } from "fs";
 import { resolve } from "path";
 import { renderPreloadLinks } from "./renderPreloadLinks";
+import type { Data } from "../../src/types/Data";
 
 interface Options {
   render: ServerRenderFunction;
@@ -30,13 +31,16 @@ const minifierOptions: MinifierOption = {
   sortClassName: true
 };
 
-export const getHtml = async (options: Options) => {
+export const getHtml = async (options: Options, config: Data) => {
   const { render, isProd, url, template } = options;
   const manifest = isProd ? require("../../build/ssr-manifest.json") : {};
 
-  const { html: renderedHtml, context } = await render(url);
+  const { html: renderedHtml, context } = await render(url, config);
   const preloadLinks = renderPreloadLinks(context.modules, manifest);
-  const html = template.replace("<!-- app-html -->", renderedHtml).replace(`<!-- preload-links -->`, preloadLinks);
+  const html = template
+    .replace("<!-- app-html -->", renderedHtml)
+    .replace(`<!-- preload-links -->`, preloadLinks)
+    .replace("<!-- data-config -->", JSON.stringify(config));
 
   const minifiedHtml = minify(html, minifierOptions);
   let finalHtml = minifiedHtml;
