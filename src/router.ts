@@ -10,7 +10,4 @@ export const routes: RouteRecordRaw[] = [
   { name: "CV", path: "/cv", component: async () => CV }
 ];
 
-export const router = createRouter({
-  history: isSSR ? createMemoryHistory() : createWebHistory(),
-  routes
-});
+export const router = createRouter({ history: isSSR ? createMemoryHistory() : createWebHistory(), routes });
