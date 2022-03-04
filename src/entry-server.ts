@@ -13,7 +13,7 @@ const dummyConfig: Data = {
   email: "",
   image: { png: "", webp: "" },
   from: { city: "", country: "" },
-  birthday: { day: -1, month: 0, year: -1 },
+  birthday: { day: -1, month: -1, year: -1 },
   skills: {},
   skillTypes: {},
   education: [],
