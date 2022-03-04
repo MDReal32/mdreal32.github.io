@@ -43,7 +43,7 @@ export const createServer = async (root = process.cwd(), isProd = _isProd) => {
     const { originalUrl: url } = req;
     let template: string, render: ServerRenderFunction;
     let config: Data = data;
-    if (!isProd) {
+    if (isProd) {
       config = (await Axios.get<Data>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json")).data;
     }
 
