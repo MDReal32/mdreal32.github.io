@@ -139,6 +139,9 @@ const language = computed(() => store.getters.getLang as Lang);
 const isLoadingEnabled = computed(() => store.getters.isPageReady);
 const educations = computed(() => config.education.reverse());
 const jobs = computed(() => config.job.reverse());
+const skillTypes = computed(() => Object.keys(config.skillTypes));
+const activeSkillType = computed(() => store.getters.skillType as string);
+const pdf = ref();
 
 const t = (message: string) => config.i18n[language.value][message?.slice(1)] || message;
 const tForm = (input: string, code: string) =>
@@ -184,6 +187,22 @@ const getUserNameFromUrl = (url: string) => {
   }
 
   return url;
+};
+
+const filterByTypes = (skills: Data["skills"]) => {
+  const filteredSkills: Data["skills"] = {};
+
+  Object.entries(skills).forEach(([name, value]) => {
+    if (skillTypes.value.includes(name)) {
+      if (name === activeSkillType.value) {
+        filteredSkills[name] = value;
+      }
+    } else {
+      filteredSkills[name] = value;
+    }
+  });
+
+  return filteredSkills;
 };
 
 const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] => {
