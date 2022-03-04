@@ -5,4 +5,5 @@ export interface State {
   config: Partial<Data>;
   isPageReady: boolean;
   lang: Lang;
+  skillType: string;
 }
