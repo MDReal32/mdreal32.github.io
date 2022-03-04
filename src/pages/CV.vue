@@ -11,7 +11,7 @@
         <div class="links">
           <div v-for="{ name, icon, url } in config.socialLinks" class="link">
             <a :href="url" target="_blank">
-              <img :alt="name" :src="icon" class="icon" />
+              <img :alt="name" :src="icon" class="icon" width="20" height="20" />
               <span>@{{ getUserNameFromUrl(url) }}</span>
             </a>
           </div>
@@ -56,22 +56,42 @@
 
         <div class="half">
           <div class="first">
-            <img src="https://icongr.am/material/phone.svg?size=16&color=currentColor" alt="Phone" />
+            <img
+              src="https://icongr.am/material/phone.svg?size=16&color=currentColor"
+              alt="Phone"
+              width="16"
+              height="16"
+            />
             <span>{{ config.phoneNumber }}</span>
           </div>
           <div class="second">
-            <img src="https://icongr.am/material/calendar.svg?size=16&color=currentColor" alt="Date" />
+            <img
+              src="https://icongr.am/material/calendar.svg?size=16&color=currentColor"
+              alt="Date"
+              width="16"
+              height="16"
+            />
             <span>{{ birthday }}</span>
           </div>
         </div>
 
         <div class="half">
           <div class="first">
-            <img src="https://icongr.am/material/email.svg?size=16&color=currentColor" alt="Mail" />
+            <img
+              src="https://icongr.am/material/email.svg?size=16&color=currentColor"
+              alt="Mail"
+              width="16"
+              height="16"
+            />
             <span>{{ config.email }}</span>
           </div>
           <div class="second">
-            <img src="https://icongr.am/material/map-marker.svg?size=16&color=currentColor" alt="Marker" />
+            <img
+              src="https://icongr.am/material/map-marker.svg?size=16&color=currentColor"
+              alt="Marker"
+              width="16"
+              height="16"
+            />
             <span>{{ t(config.from.city) }}, {{ t(config.from.country) }}</span>
           </div>
         </div>
@@ -282,7 +302,7 @@ const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] 
             text-decoration: none;
             color: #000;
 
-            img {
+            .icon {
               max-width: 20px;
             }
           }
