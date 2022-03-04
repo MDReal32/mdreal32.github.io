@@ -30,6 +30,7 @@
     "@types/node": "^17.0.12",
     "@types/prettier": "^2.4.3",
     "@vitejs/plugin-vue": "^2.0.0",
+    "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-prepush": "^2.2.0",
