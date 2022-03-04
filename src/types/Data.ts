@@ -62,6 +62,7 @@ export interface Data {
   birthday: Date;
   from: Location;
   skills: Record<string, OverkilledSkill[]>;
+  skillTypes: Record<string, true>;
   languages: Language[];
   education: Education[];
   socialLinks: SocialLink[];
