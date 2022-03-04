@@ -81,7 +81,7 @@
         <h2 class="header">Skills</h2>
 
         <div class="skills">
-          <div v-for="[name, skill] of Object.entries(config.skills)" class="skill">
+          <div v-for="(skill, name) in filterByTypes(config.skills)" class="skill">
             <h4 class="skill-name">{{ name }} Skills</h4>
 
             <div class="skill-items">
