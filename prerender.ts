@@ -18,12 +18,12 @@ const { render } = require("./build/server-bundle/entry-server") as ServerModule
   for (const route of pageRoutes) {
     const endpoint = route.path.toLowerCase();
     const destinationFile = resolve(`build/${endpoint}.html`);
-    const html = await getHtml({ url: endpoint, render, isProd: true, template }, config);
+    const html = await getHtml({ url: endpoint, render, isProd: true, template, config });
     mkdirSync(dirname(destinationFile), { recursive: true });
     writeFileSync(destinationFile, html);
   }
 
   const destinationFile = resolve(`build/index.html`);
-  const html = await getHtml({ url: "/", render, isProd: true, template }, config);
+  const html = await getHtml({ url: "/", render, isProd: true, template, config });
   writeFileSync(destinationFile, html);
 })();

@@ -53,7 +53,7 @@ export const createServer = async (root = process.cwd(), isProd = _isProd) => {
         render = (await vite.ssrLoadModule("/src/entry-server.ts")).render;
       }
 
-      const html = await getHtml({ url, render, isProd, template }, config);
+      const html = await getHtml({ url, render, isProd, template, config, res });
 
       res.status(200).set({ "Content-Type": "text/html" }).end(html);
     } catch (e) {
