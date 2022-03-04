@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server",
+    "dev": "cross-env NODE_ENV=development nodemon server",
     "build:server": "vite build --ssr src/entry-server.ts --outDir build/server-bundle",
     "build:client": "vue-tsc --noEmit && vite build --ssrManifest",
-    "prebuild": "rimraf build && yarn build:client && yarn build:server",
+    "prebuild": "rimraf build && cross-env NODE_ENV=production yarn build:client && cross-env NODE_ENV=production yarn build:server",
     "build": "ts-node prerender.ts",
     "postbuild": "rimraf build/ssr-manifest.json build/server-bundle",
     "preview": "serve build",
