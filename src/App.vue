@@ -44,13 +44,18 @@ import { Data } from "./types/Data";
 import { Lang } from "./types/Lang";
 import { modifyString } from "./utils/modifyString";
 import { getPageRoutes } from "./utils/pageRoutes";
+import { computed } from "vue";
 
 const store = useStore();
 const router = useRouter();
 const pageRoutes = getPageRoutes();
 
-const languages: Lang[] = ["az", "ru", "en"];
 const config = store.getters.config as Data;
+
+const languages: Lang[] = ["az", "ru", "en"];
+const skillTypes = computed(() => Object.keys(config.skillTypes));
+const skillType = computed(() => store.getters.skillType as string);
+const activeLanguage = computed(() => store.getters.getLang as Lang);
 
 const locale = (lang: Lang) => store.dispatch("setLang", lang);
 const isActive = (idx: number) => () => pageRoutes[idx].path === router.currentRoute.value.path;
