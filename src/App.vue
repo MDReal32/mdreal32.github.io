@@ -2,7 +2,7 @@
   <div class="app">
     <aside class="aside">
       <div :class="{ groups: true, active: true }">
-        <div class="grouping" :style="{ '--children-count': languages.length }">
+        <div class="grouping" :style="`--children-count: ${languages.length}`">
           <button
             :class="{ button: true, animated: true, active: l === activeLanguage }"
             v-for="l in languages"
@@ -12,7 +12,7 @@
           </button>
         </div>
 
-        <div class="grouping" :style="{ '--children-count': skillTypes.length > 3 ? 3 : skillTypes.length }">
+        <div class="grouping" :style="`--children-count: ${skillTypes.length > 3 ? 3 : skillTypes.length}`">
           <button
             :class="{ button: true, animated: true, active: st === skillType }"
             v-for="st in skillTypes"
