@@ -2,9 +2,9 @@
   <div class="resume">
     <div class="left">
       <section class="sector logo">
-        <picture>
+        <picture class="me">
           <source :srcset="config.image.png" />
-          <img :alt="`${t(config.name)} ${t(config.surname)}`" :src="config.image.png" class="me" />
+          <img :alt="`${t(config.name)} ${t(config.surname)}`" :src="config.image.png" />
         </picture>
       </section>
 
@@ -289,9 +289,13 @@ const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] 
         width: 100%;
       }
 
-      img.me {
-        width: 70%;
-        margin: 0 auto;
+      .me {
+        display: flex;
+
+        img {
+          margin: 0 auto;
+          width: 70%;
+        }
       }
 
       .links {
