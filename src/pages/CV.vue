@@ -2,7 +2,10 @@
   <div class="resume">
     <div class="left">
       <section class="sector logo">
-        <img :alt="`${t(config.name)} ${t(config.surname)}`" :src="config.image" class="me" />
+        <picture>
+          <source :srcset="config.image.png" />
+          <img :alt="`${t(config.name)} ${t(config.surname)}`" :src="config.image.png" class="me" />
+        </picture>
       </section>
 
       <section class="sector">
