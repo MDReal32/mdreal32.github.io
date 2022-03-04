@@ -8,6 +8,7 @@ import { ServerRenderFunction } from "./src/types/ServerRenderFunction";
 import { getHtml } from "./server/utils/getHtml";
 import Axios from "axios";
 import type { Data } from "./src/types/Data";
+import { data } from "./src/utils/data";
 
 const isTest = process.env.NODE_ENV === "test" || !!process.env.VITE_TEST_BUILD;
 const _isProd = process.env.NODE_ENV === "production";
@@ -41,9 +42,10 @@ export const createServer = async (root = process.cwd(), isProd = _isProd) => {
   app.use("*", async (req, res) => {
     const { originalUrl: url } = req;
     let template: string, render: ServerRenderFunction;
-    const { data: config } = await Axios.get<Data>(
-      "https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json"
-    );
+    let config: Data = data;
+    if (!isProd) {
+      config = (await Axios.get<Data>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json")).data;
+    }
 
     try {
       if (isProd) {
