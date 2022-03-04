@@ -350,6 +350,13 @@ const groupBy = <T extends OverkilledSkill = OverkilledSkill>(skills: T[]): T[] 
       .half {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
+        & > div {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 8px;
+        }
       }
 
       .skills {
