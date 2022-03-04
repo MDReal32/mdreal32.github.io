@@ -40,7 +40,7 @@ export const getHtml = async (options: Options) => {
   const manifest = isProd ? require("../../build/ssr-manifest.json") : {};
   const nonceId = randomBytes(16).toString("base64");
 
-  const { html: renderedHtml, context } = await render(url, config);
+  const { html: renderedHtml, context } = await render(url);
   const preloadLinks = renderPreloadLinks(context.modules, manifest);
   const html = template
     .replace("<!-- app-html -->", renderedHtml)
