@@ -5,8 +5,27 @@ import { ServerRenderFunction } from "./types/ServerRenderFunction";
 import { Data } from "./types/Data";
 import { store } from "./store";
 
-export const render: ServerRenderFunction = async (url: string, config: Data) => {
-  await store.dispatch("setConfig", config);
+const dummyConfig: Data = {
+  name: "",
+  surname: "",
+  phoneNumber: "",
+  description: "",
+  email: "",
+  image: "",
+  from: { city: "", country: "" },
+  birthday: { day: -1, month: -1, year: -1 },
+  skills: {},
+  skillTypes: {},
+  education: [],
+  languages: [],
+  socialLinks: [],
+  job: [],
+  groups: {},
+  i18n: {}
+};
+
+export const render: ServerRenderFunction = async (url: string) => {
+  await store.dispatch("setConfig", dummyConfig);
   await router.push(url);
   await router.isReady();
   const app = createApp();
