@@ -1,11 +1,28 @@
 <template>
   <div class="app">
     <aside class="aside">
-      <div class="convertLanguage">
-        <button class="button animated" v-for="l in languages" @click="locale(l)">
-          <span>{{ modifyString(l || "") }}</span>
-        </button>
+      <div :class="{ groups: true, active: true }">
+        <div class="grouping" :style="{ '--children-count': languages.length }">
+          <button
+            :class="{ button: true, animated: true, active: l === activeLanguage }"
+            v-for="l in languages"
+            @click="locale(l)"
+          >
+            <span>{{ modifyString(l || "") }}</span>
+          </button>
+        </div>
+
+        <div class="grouping" :style="{ '--children-count': skillTypes.length > 3 ? 3 : skillTypes.length }">
+          <button
+            :class="{ button: true, animated: true, active: st === skillType }"
+            v-for="st in skillTypes"
+            @click="changeSkillTo(st)"
+          >
+            <span>{{ modifyString(st.toLowerCase() || "") }}</span>
+          </button>
+        </div>
       </div>
+
       <div
         v-for="(route, idx) in pageRoutes"
         :class="{ 'link-container': true, 'active': isActive(idx) }"
