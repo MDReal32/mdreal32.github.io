@@ -39,8 +39,13 @@ export const getHtml = async (options: Options, config: Data) => {
   const preloadLinks = renderPreloadLinks(context.modules, manifest);
   const html = template
     .replace("<!-- app-html -->", renderedHtml)
-    .replace(`<!-- preload-links -->`, preloadLinks)
-    .replace("<!-- data-config -->", JSON.stringify(config));
+    .replace("<!-- preload-links -->", preloadLinks)
+    .replace("<!-- data-config -->", JSON.stringify(config))
+    .replace("<!-- nonce-id -->", nonceId);
+
+  if (res) {
+    // res.setHeader("Content-Security-Policy", `script-src 'nonce-${nonceId}'`);
+  }
 
   const minifiedHtml = minify(html, minifierOptions);
   let finalHtml = minifiedHtml;
