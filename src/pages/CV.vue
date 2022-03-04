@@ -55,13 +55,25 @@
         <h3 class="header">{{ t(config.description) }}</h3>
 
         <div class="half">
-          <div class="first">{{ config.phoneNumber }}</div>
-          <div class="second">{{ birthday }}</div>
+          <div class="first">
+            <img src="https://icongr.am/material/phone.svg?size=16&color=currentColor" alt="Phone" />
+            <span>{{ config.phoneNumber }}</span>
+          </div>
+          <div class="second">
+            <img src="https://icongr.am/material/calendar.svg?size=16&color=currentColor" alt="Date" />
+            <span>{{ birthday }}</span>
+          </div>
         </div>
 
         <div class="half">
-          <div class="first">{{ config.email }}</div>
-          <div class="second">{{ t(config.from.city) }}, {{ t(config.from.country) }}</div>
+          <div class="first">
+            <img src="https://icongr.am/material/email.svg?size=16&color=currentColor" alt="Mail" />
+            <span>{{ config.email }}</span>
+          </div>
+          <div class="second">
+            <img src="https://icongr.am/material/map-marker.svg?size=16&color=currentColor" alt="Marker" />
+            <span>{{ t(config.from.city) }}, {{ t(config.from.country) }}</span>
+          </div>
         </div>
       </section>
 
