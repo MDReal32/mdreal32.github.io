@@ -78,60 +78,70 @@ const setPage = (idx: number) => router.push(pageRoutes[idx].path);
     padding-top: 80px;
     position: sticky;
 
-    .convertLanguage {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      padding: 5px 10px;
+    .groups {
+      &:not(.active) {
+        display: none;
+      }
 
-      .button {
-        pointer-events: auto;
-        cursor: pointer;
-        background: #e7e7e7;
-        border: none;
-        padding: 10px 20px;
-        margin: 0;
-        font-family: inherit;
-        font-size: inherit;
-        position: relative;
-        display: inline-block;
-        outline: none;
+      .grouping {
+        display: grid;
+        grid-template-columns: repeat(var(--children-count), 1fr);
+        gap: 10px;
+        padding: 5px 10px;
 
-        &:before,
-        &:after {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
+        .button {
+          pointer-events: auto;
+          cursor: pointer;
+          background: #e7e7e7;
+          border: none;
+          padding: 10px 20px;
+          margin: 0;
+          font-family: inherit;
+          font-size: inherit;
+          position: relative;
+          display: inline-block;
+          outline: none;
 
-        &.animated {
-          text-transform: uppercase;
-          letter-spacing: 0.05rem;
-          font-weight: 700;
-          font-size: 0.85rem;
-          border-radius: 0.5rem;
-          overflow: hidden;
-          color: #fff;
-          background: #fff;
-
-          span {
-            position: relative;
-            mix-blend-mode: difference;
+          &:before,
+          &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
 
-          &:before {
-            content: "";
-            background: #0a1b4b;
-            width: 130%;
-            left: -15%;
-            transform: skew(30deg);
-            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+          &.active:before {
+            transform: translate(100%, 0) !important;
           }
 
-          &:hover::before {
-            transform: translate(100%, 0);
+          &.animated {
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            color: #fff;
+            background: #fff;
+
+            span {
+              position: relative;
+              mix-blend-mode: difference;
+            }
+
+            &:before {
+              content: "";
+              background: #0a1b4b;
+              width: 130%;
+              left: -15%;
+              transform: skew(30deg);
+              transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+            }
+
+            &:hover::before {
+              transform: translate(100%, 0);
+            }
           }
         }
       }
