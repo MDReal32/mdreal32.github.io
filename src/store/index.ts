@@ -4,10 +4,13 @@ import { Data } from "../types/Data";
 import { Lang } from "../types/Lang";
 
 export const store = createStore<State>({
-  state: { config: {}, isPageReady: false, lang: "az" },
+  state: { config: {}, isPageReady: false, lang: "az", skillType: "" },
   getters: {
     config({ config }) {
       return config;
+    },
+    skillType({ skillType }) {
+      return skillType;
     },
     isPageReady({ isPageReady }) {
       return isPageReady;
@@ -19,12 +22,16 @@ export const store = createStore<State>({
   mutations: {
     setConfig(state, config: Data) {
       state.config = config;
+      config?.skillTypes && (state.skillType = Object.keys(config.skillTypes)[0]);
     },
     pageReady(state) {
       state.isPageReady = true;
     },
     setLang(state, lang: Lang) {
       state.lang = lang;
+    },
+    setSkillType(state, skillType: string) {
+      state.skillType = skillType;
     }
   },
   actions: {
@@ -36,6 +43,9 @@ export const store = createStore<State>({
     },
     setLang({ commit }, lang: Lang) {
       commit("setLang", lang);
+    },
+    setSkillType({ commit }, skillType: string) {
+      commit("setSkillType", skillType);
     }
   }
 });
