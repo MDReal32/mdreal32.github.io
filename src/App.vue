@@ -58,6 +58,7 @@ const skillType = computed(() => store.getters.skillType as string);
 const activeLanguage = computed(() => store.getters.getLang as Lang);
 
 const locale = (lang: Lang) => store.dispatch("setLang", lang);
+const changeSkillTo = (skillType: string) => store.dispatch("setSkillType", skillType);
 const isActive = (idx: number) => () => pageRoutes[idx].path === router.currentRoute.value.path;
 const setPage = (idx: number) => router.push(pageRoutes[idx].path);
 </script>
