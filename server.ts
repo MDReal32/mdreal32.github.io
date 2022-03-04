@@ -15,6 +15,8 @@ const _isProd = process.env.NODE_ENV === "production";
 const app = express();
 let vite: ViteDevServer;
 
+app.set("X-Powered-By", false);
+
 const viteConfig: ViteCreateServerConfig = {
   logLevel: isTest ? "error" : "info",
   server: { middlewareMode: "ssr", watch: { usePolling: true, interval: 100 } }
