@@ -143,7 +143,7 @@ const skillTypes = computed(() => Object.keys(config.skillTypes));
 const activeSkillType = computed(() => store.getters.skillType as string);
 const pdf = ref();
 
-const t = (message: string) => config.i18n[language.value][message?.slice(1)] || message;
+const t = (message: string) => config.i18n[message?.slice(1)]?.[language.value] || message;
 const tForm = (input: string, code: string) =>
   language.value === "az" ? `${t(input)}${t(`#${code}`)}` : `${t(`#${code}`)} ${t(input)}`;
 
