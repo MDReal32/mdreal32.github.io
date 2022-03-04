@@ -6,7 +6,10 @@ export const data: Data = {
   phoneNumber: "+99470 506 93 24",
   description: "#description",
   email: "veysaliyev00@gmail.com",
-  image: "https://github.com/MDReal32/MDReal32/raw/master/assets/me.jpg",
+  image: {
+    png: "https://github.com/MDReal32/MDReal32/raw/master/assets/me.jpg",
+    webp: "https://github.com/MDReal32/MDReal32/raw/master/assets/me.webp"
+  },
   from: { city: "#city.baku", country: "#country.azerbaijan" },
   birthday: { day: 3, month: 8, year: 2000 },
   skills: {
