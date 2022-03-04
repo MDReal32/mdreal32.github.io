@@ -16,7 +16,7 @@ preloaderApp.mount(".preloader .preloader-container");
   Axios.get<Data>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json")
     .then(({ data: config }) => store.dispatch("setConfig", config))
     // @ts-ignore
-    .then(() => import.meta.env === "development" && store.dispatch("setConfig", data));
+    .then(() => import.meta.env.DEV && store.dispatch("setConfig", data));
 
   app.mount("#app");
 })();
