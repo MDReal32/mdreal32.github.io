@@ -3,6 +3,7 @@ import { router } from "./router";
 import { store } from "./store";
 import Axios from "axios";
 import { Data } from "./types/Data";
+import { data } from "./utils/data";
 
 preloaderApp.mount(".preloader .preloader-container");
 
@@ -12,9 +13,10 @@ preloaderApp.mount(".preloader .preloader-container");
   const jsonData = JSON.parse(document.getElementById("data")!.textContent!);
   await store.dispatch("setConfig", jsonData);
 
-  Axios.get<Data>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json").then(({ data: config }) =>
-    store.dispatch("setConfig", config)
-  );
+  Axios.get<Data>("https://raw.githubusercontent.com/MDReal32/MDReal32/master/config.json")
+    .then(({ data: config }) => store.dispatch("setConfig", config))
+    // @ts-ignore
+    .then(() => import.meta.env === "development" && store.dispatch("setConfig", data));
 
   app.mount("#app");
 })();
