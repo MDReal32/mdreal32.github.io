@@ -53,7 +53,7 @@ const pageRoutes = getPageRoutes();
 const config = store.getters.config as Data;
 
 const languages: Lang[] = ["az", "ru", "en"];
-const skillTypes = computed(() => Object.keys(config.skillTypes));
+const skillTypes = computed(() => Object.keys(config.skillTypes || {}));
 const skillType = computed(() => store.getters.skillType as string);
 const activeLanguage = computed(() => store.getters.getLang as Lang);
 
