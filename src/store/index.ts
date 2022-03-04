@@ -22,7 +22,7 @@ export const store = createStore<State>({
   mutations: {
     setConfig(state, config: Data) {
       state.config = config;
-      config?.skillTypes && (state.skillType = Object.keys(config.skillTypes)[0]);
+      state.skillType = Object.keys(config.skillTypes)?.[0];
     },
     pageReady(state) {
       state.isPageReady = true;
