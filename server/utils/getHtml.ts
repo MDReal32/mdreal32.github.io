@@ -5,12 +5,16 @@ import { readFileSync } from "fs";
 import { resolve } from "path";
 import { renderPreloadLinks } from "./renderPreloadLinks";
 import type { Data } from "../../src/types/Data";
+import { randomBytes } from "crypto";
+import { Response } from "express";
 
 interface Options {
   render: ServerRenderFunction;
   isProd: boolean;
   url: string;
   template: string;
+  config: Data;
+  res?: Response;
 }
 
 const prettierOptions: PrettierOptions = {
@@ -31,9 +35,10 @@ const minifierOptions: MinifierOption = {
   sortClassName: true
 };
 
-export const getHtml = async (options: Options, config: Data) => {
-  const { render, isProd, url, template } = options;
+export const getHtml = async (options: Options) => {
+  const { render, isProd, url, template, config, res } = options;
   const manifest = isProd ? require("../../build/ssr-manifest.json") : {};
+  const nonceId = randomBytes(16).toString("base64");
 
   const { html: renderedHtml, context } = await render(url, config);
   const preloadLinks = renderPreloadLinks(context.modules, manifest);
