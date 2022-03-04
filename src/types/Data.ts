@@ -1,3 +1,8 @@
+export interface Image {
+  png: string;
+  webp: string;
+}
+
 export interface Date {
   day: number;
   month: number;
@@ -56,7 +61,7 @@ export interface Data {
   name: string;
   surname: string;
   description: string;
-  image: string;
+  image: Image;
   phoneNumber: string;
   email: string;
   birthday: Date;
